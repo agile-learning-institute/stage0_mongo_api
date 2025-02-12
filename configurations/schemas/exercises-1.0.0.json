@@ -1,0 +1,40 @@
+{
+    "description": "A design thinking exercise",
+    "bsonType": "object",
+    "properties": {
+        "_id": {
+            "description": "The unique identifier for a Exercise",
+            "bsonType": "objectId"
+        },
+        "name": {
+            "description": "name",
+            "msmType": "sentence"
+        }, 
+        "description": {
+            "description": "description",
+            "msmType": "paragraph"
+        },
+        "duration": {
+            "description": "duration in minutes",
+            "msmType": "count"
+        },
+        "observe_instructions": {
+            "description": "observation exercise instructions",
+            "msmType": "paragraph"
+        },
+        "reflect_instructions": {
+            "description": "reflect exercise instructions",
+            "msmType": "paragraph"
+        },
+        "make_instructions": {
+            "description": "make exercise instructions",
+            "msmType": "paragraph"
+        },
+        "last_saved": {
+            "description": "Last Saved breadcrumb",
+            "msmType": "breadcrumb"
+        }
+    },
+    "required": ["_id", "name", "last_saved"],
+    "additionalProperties": false
+}

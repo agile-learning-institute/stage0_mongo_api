@@ -3,6 +3,26 @@
         "name": "Enumerations",
         "status": "Active",
         "version": 0,
-        "enumerators": []
-   }    
+        "enumerators": {
+            "workshop_status": {
+                "Pending": "Scheduled, but not started",
+                "Active": "Started but not finished",
+                "Complete": "Finished",
+                "Archived": "Soft Delete Indicator"
+            },
+            "exercise_status": {
+                "Pending": "Waiting to start",
+                "Observe": "Observe as Individuals",
+                "Reflect": "Reflect as a Team",
+                "Make": "Make a decision as a Team",
+                "Complete": "Exercise Completed"
+            },
+            "roles": {
+                "Facilitator": "A Design Thinking Facilitator",
+                "Engineer": "A Stage0 AI Engineer",
+                "Practitioner": "A Design Thinking Practitioner",
+                "Administrator": "A Super User"
+            }
+        }
+    }
 ]

@@ -1,0 +1,77 @@
+[
+  {
+    "_id": {"$oid": "B00000000000000000000001"},
+    "name": "Stakeholders",
+    "description": "",
+    "duration": 0,
+    "observe_instructions": "",
+    "reflect_instructions": "",
+    "make_instructions": "",
+    "last_saved": {
+      "fromIp": "",
+      "byUser": "",
+      "atTime": "",
+      "correlationId": ""
+    }
+  },
+  {
+    "_id": {"$oid": "B00000000000000000000002"},
+    "name": "EmpathyMap",
+    "description": "",
+    "duration": 0,
+    "observe_instructions": "",
+    "reflect_instructions": "",
+    "make_instructions": "",
+    "last_saved": {
+      "fromIp": "",
+      "byUser": "",
+      "atTime": "",
+      "correlationId": ""
+    }
+  },
+  {
+    "_id": {"$oid": "B00000000000000000000003"},
+    "name": "Hills",
+    "description": "",
+    "duration": 0,
+    "observe_instructions": "",
+    "reflect_instructions": "",
+    "make_instructions": "",
+    "last_saved": {
+      "fromIp": "",
+      "byUser": "",
+      "atTime": "",
+      "correlationId": ""
+    }
+  },
+  {
+    "_id": {"$oid": "B00000000000000000000004"},
+    "name": "PriorityGrid",
+    "description": "",
+    "duration": 0,
+    "observe_instructions": "",
+    "reflect_instructions": "",
+    "make_instructions": "",
+    "last_saved": {
+      "fromIp": "",
+      "byUser": "",
+      "atTime": "",
+      "correlationId": ""
+    }
+  },
+  {
+    "_id": {"$oid": "B00000000000000000000005"},
+    "name": "Feedback",
+    "description": "",
+    "duration": 0,
+    "observe_instructions": "",
+    "reflect_instructions": "",
+    "make_instructions": "",
+    "last_saved": {
+      "fromIp": "",
+      "byUser": "",
+      "atTime": "",
+      "correlationId": ""
+    }
+  }
+]

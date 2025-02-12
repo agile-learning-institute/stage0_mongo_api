@@ -1,0 +1,74 @@
+{
+    "description": "A record of a specific design thinking workshop.",
+    "bsonType": "object",
+    "properties": {
+        "_id": {
+            "description": "The unique identifier for a Workshop",
+            "bsonType": "objectId"
+        },
+        "status": {
+            "description": "Status",
+            "msmEnum": "workshop_status"
+        },
+        "name": {
+            "description": "Workshop Name (Channel Name)",
+            "msmType": "sentence"
+        },
+        "category": {
+            "description": "Discord Channel Category where this workshop channel is",
+            "msmType": "sentence"
+        },
+        "guild": {
+            "description": "Discord Server where this workshop takes place",
+            "msmType": "sentence"
+        },
+        "purpose": {
+            "description": "Workshop Purpose",
+            "msmType": "paragraph"
+        },
+        "when": {
+            "description": "From-To Date/Time for the Workshop Event",
+            "msmType": "appointment"
+        },
+        "current_exercise": {
+            "description": "Index of the current exercise for Active workshops",
+            "msmType": "index"
+        },
+        "exercises": {
+            "description": "List of exercises",
+            "bsonType": "array",
+            "items": {
+                "description": "A record of a specific design thinking workshop exercise.",
+                "bsonType": "object",
+                "properties": {
+                    "name": {
+                        "description": "Exercise Name (found in Exercises)",
+                        "msmType": "sentence"
+                    },
+                    "messages": {
+                        "description": "list of chat messages",
+                        "bsonType": "array",
+                        "items": {
+                            "msmType": "markdown"
+                        }
+                    },
+                    "observations": {
+                        "description": "list of Observations made during this exercise",
+                        "bsonType": "array",
+                        "items": {
+                            "bsonType": "object"
+                        }
+                    }
+                },
+                "required": ["name","messages"],
+                "additionalProperties": false
+            }
+        },
+        "last_saved": {
+            "description": "Last Saved breadcrumb",
+            "msmType": "breadcrumb"
+        }
+    },
+    "required": ["_id", "status", "name", "exercises", "last_saved"],
+    "additionalProperties": false
+}

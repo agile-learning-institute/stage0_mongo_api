@@ -1,0 +1,54 @@
+{
+    "description": "A record of a specific design thinking workshop exercise",
+    "bsonType": "object",
+    "properties": {
+        "_id": {
+            "description": "The unique identifier for a Workshop Exercise",
+            "bsonType": "objectId"
+        },
+        "workshop_id": {
+            "description": "The Workshop this exercise is a part of",
+            "bsonType": "objectId"
+        },
+        "exercise_id": {
+            "description": "The Exercise Instructions this is using",
+            "bsonType": "objectId"
+        },
+        "name": {
+            "description": "Exercise Name (found in Exercises)",
+            "msmType": "sentence"
+        },
+        "status": {
+            "description": "Exercise Status (Observe/Reflect/Make)",
+            "msmEnum": "exercise_status"
+        },
+        "messages": {
+            "description": "list of chat messages",
+            "bsonType": "array",
+            "items": {
+                "msmType": "markdown"
+            }
+        },
+        "observations": {
+            "description": "list of Observations made during this exercise",
+            "bsonType": "array",
+            "items": {
+                "bsonType": "object"
+            }
+        },
+        "last_saved": {
+            "description": "Last Saved breadcrumb",
+            "msmType": "breadcrumb"
+        }
+    },
+    "required": [
+        "id",
+        "workshop_id",
+        "exercise_id",
+        "name",
+        "messages",
+        "observations",
+        "last_saved"
+    ],
+    "additionalProperties": false
+}

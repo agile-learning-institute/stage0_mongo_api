@@ -1,5 +1,7 @@
-# mongoSchemaManagerTemplate
-This is the template for using the mongoSchemaManager container. You can delete the sections below as you complete each setup.
+# stage0 Mongodb
+
+This repo contains the Mongo configurations for the Stage0 Mongo Database. 
+
 
 - [ ] Update [Dockerfile](./Dockerfile)
 

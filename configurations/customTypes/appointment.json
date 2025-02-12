@@ -1,0 +1,16 @@
+{
+	"description": "From and To Date/Time values",
+	"bsonType": "object",
+	"properties": {
+		"from": {
+			"description": "Starting Date/Time",
+			"msmType": "timestamp"
+		},
+		"to": {
+			"description": "Ending Date/Time",
+			"msmType": "timestamp"
+		}
+	},
+	"required": ["from", "to"],
+	"additionalProperties": false
+}

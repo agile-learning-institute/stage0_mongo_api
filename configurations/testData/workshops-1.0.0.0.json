@@ -1,0 +1,85 @@
+[
+  {
+    "_id": {"$oid": "000000000000000000000000"},
+    "status": "Pending",
+    "name": "Pending Empty",
+    "exercises": [
+    ],
+    "last_saved": {
+      "fromIp": "",
+      "byUser": "",
+      "atTime": "",
+      "correlationId": ""
+    }
+  },
+  {
+    "_id": {"$oid": "000000000000000000000001"},
+    "status": "Pending",
+    "name": "Pending Kickoff",
+    "exercises": [
+      {"$oid": "100000000000000000000001"},
+      {"$oid": "100000000000000000000002"},
+      {"$oid": "100000000000000000000003"},
+      {"$oid": "100000000000000000000004"},
+      {"$oid": "100000000000000000000005"}
+    ],
+    "last_saved": {
+      "fromIp": "",
+      "byUser": "",
+      "atTime": "",
+      "correlationId": ""
+    }
+  },
+  {
+    "_id": {"$oid": "000000000000000000000002"},
+    "status": "Active",
+    "name": "Active Kickoff",
+    "guild": "Stage0",
+    "category": "design workshops",
+    "purpose": "Kick off the design for my project",
+    "when": {
+      "from": "TODO DATE",
+      "to": "TODO TIME"
+    },
+    "current_exercise": 1,
+    "exercises": [
+      {"$oid": "200000000000000000000001"},
+      {"$oid": "200000000000000000000002"},
+      {"$oid": "200000000000000000000003"},
+      {"$oid": "200000000000000000000004"},
+      {"$oid": "200000000000000000000005"}
+    ],
+    "last_saved": {
+      "fromIp": "",
+      "byUser": "",
+      "atTime": "",
+      "correlationId": ""
+    }
+  },
+  {
+    "_id": {"$oid": "000000000000000000000003"},
+    "status": "Complete",
+    "name": "Completed Kickoff",
+    "guild": "Stage0",
+    "category": "design workshops",
+    "purpose": "Kick off the design for my project",
+    "when": {
+      "from": "",
+      "to": ""
+    },
+    "current_exercise": 4,
+    "exercises": [
+      {"$oid": "300000000000000000000001"},
+      {"$oid": "300000000000000000000002"},
+      {"$oid": "300000000000000000000003"},
+      {"$oid": "300000000000000000000004"},
+      {"$oid": "300000000000000000000005"}
+    ],
+    "last_saved": {
+      "fromIp": "",
+      "byUser": "",
+      "atTime": "",
+      "correlationId": ""
+    }
+  }
+]
