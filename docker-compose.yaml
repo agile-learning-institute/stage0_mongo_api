@@ -1,0 +1,42 @@
+version: '3.1'
+
+services:
+  mongodb-server:
+    image: mongo:7.0.5
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - "27017:27017"
+    healthcheck:
+      test: ["CMD", "mongosh", "-u", "root", "-p", "example", "--authenticationDatabase", "admin", "--eval", "db.adminCommand('ping')"]
+      interval: 2s
+      timeout: 2s
+      retries: 15
+    profiles:
+      - msmtest
+      - testing
+
+  msm:
+    depends_on:
+      mongodb-server:
+        condition: service_healthy
+    volumes:
+    - ./configurations:/opt/mongoSchemaManager/configurations
+    environment:
+      CONNECTION_STRING: "mongodb://root:example@mongodb-server:27017"
+      LOAD_TEST_DATA: "true"
+    image: ghcr.io/agile-learning-institute/msm:latest
+    profiles:
+      - msmtest
+
+  test:
+    depends_on:
+      mongodb-server:
+        condition: service_healthy
+    environment:
+      CONNECTION_STRING: mongodb://root:example@mongodb-server:27017
+      LOAD_TEST_DATA: "true"
+    image: local/test:latest
+    profiles:
+      - testing
