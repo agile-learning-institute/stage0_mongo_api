@@ -1,0 +1,125 @@
+Exercise: Empathy Mapping
+
+observe: 
+  layout: 4 Quadrants labeled Does, Says, Thinks, Feels.
+  observe_schema:
+    description: Empathy
+    type: object
+    properties:
+      persona:
+        description:
+        type: $ref components.persona
+      does:
+        description:
+        type: array
+        items:  
+          type: $ref components.observation
+      stays:
+        description:
+        type: array
+        items:  
+          type: $ref components.observation
+      thinks:
+        description:
+        type: array
+        items:  
+          type: $ref components.observation
+      feels:
+        description:
+        type: array
+        items:  
+          type: $ref components.observation
+  discussion_prompt: 
+    - Who is this person, ask for name, role, age and hobbies, and place this information on stickies in the center circle.
+    - Alliteration's for name and role are good at this stage such as Chris the Customer. 
+    - We ask about age and hobbies to make the audience think about who this person really is.
+    - Point out that what they do and say should be easy, what have you heard say or seen them do. 
+    - What they think or feel requires a bit more consideration, it helps to think of a specific person in this role.
+  example: "TODO: Come up with good does, says, thinks, feels example"
+
+reflect:
+  reflect_schema:
+    description: Empathy
+    type: object
+    properties:
+      persona:
+        description:
+        type: $ref components.Persona
+      does:
+        description:
+        type: array
+        items:  
+          oneof:
+            - type: $ref components.Observation
+            - type: $ref components.Group
+      stays:
+        description:
+        type: array
+        items:  
+          oneof:
+            - type: $ref components.Observation
+            - type: $ref components.Group
+      thinks:
+        description:
+        type: array
+        items:  
+          oneof:
+            - type: $ref components.Observation
+            - type: $ref components.Group
+      feels:
+        description:
+        type: array
+        items:  
+          oneof:
+            - type: $ref components.Observation
+            - type: $ref components.Group
+  facilitator_prompt: Look to identify problems to solve, what makes this persons life better/worse. This exercise's primary purpose is to get the participants thinking about things that would leverage the good or mitigate the bad. 
+  scribe_prompt: This discussion builds an empathy.yaml, and will capture data schemas in the form of things the person works with, or thinks about. 
+
+make:
+  facilitator_prompt: A small conversation to summarize lessons learned, point out themes of better/worse 
+  scribe_prompt: Themes for a Hills exercise. 
+
+components:
+  persona:
+    description:
+    type: object
+    properties:
+      name: 
+        description:
+        type:
+      role:
+        description:
+        type:
+      age:
+        description:
+        type:
+      hobbies:
+        description:
+        type:
+  observations:
+    description: An observation
+    type: object
+    properties:
+      text:
+        description: The observation
+        type: Sentence
+      users:  
+        description: List of users who contributed to this observation
+        type: array
+        items:  
+          type: UserID
+  group:
+    description: A group of observations
+    type: object
+    properties:
+      text:
+        description: The group name
+        type: Sentence
+      observations:  
+        description: List of groups or observations
+        type: array
+        items:  
+          oneof:  
+            - type: group
+            - type: observation
