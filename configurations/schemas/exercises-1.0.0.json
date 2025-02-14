@@ -6,6 +6,10 @@
             "description": "The unique identifier for a Exercise",
             "bsonType": "objectId"
         },
+        "status": {
+            "description": "Status",
+            "msmEnum": "default_status"
+        },
         "name": {
             "description": "name",
             "msmType": "sentence"

@@ -6,6 +6,10 @@
             "description": "The unique identifier for a Chain",
             "bsonType": "objectId"
         },
+        "status": {
+            "description": "Status",
+            "msmEnum": "default_status"
+        },
         "name": {
             "description": "Chain short name, like Kickoff or Retrospective",
             "msmType": "msmWord"
@@ -16,12 +20,17 @@
             "items": {
                 "bsonType": "objectId"
             }
-        }, 
+        },
         "last_saved": {
             "description": "Last Saved breadcrumb",
             "msmType": "breadcrumb"
         }
     },
-    "required": ["_id", "name", "exercises", "last_saved"],
+    "required": [
+        "_id",
+        "name",
+        "exercises",
+        "last_saved"
+    ],
     "additionalProperties": false
 }
