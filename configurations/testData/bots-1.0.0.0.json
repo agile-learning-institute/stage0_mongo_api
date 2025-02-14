@@ -1,0 +1,47 @@
+[
+  {
+    "_id": {
+      "$oid": "BBB000000000000000000001"
+    },
+    "status": "Active",
+    "name": "Fran",
+    "description": "",
+    "channels": [],
+    "last_saved": {
+      "fromIp": "",
+      "byUser": "",
+      "atTime": "",
+      "correlationId": ""
+    }
+  },
+  {
+    "_id": {
+      "$oid": "BBB000000000000000000002"
+    },
+    "status": "Active",
+    "name": "Json",
+    "description": "",
+    "channels": [],
+    "last_saved": {
+      "fromIp": "",
+      "byUser": "",
+      "atTime": "",
+      "correlationId": ""
+    }
+  },
+  {
+    "_id": {
+      "$oid": "BBB000000000000000000001"
+    },
+    "status": "Active",
+    "name": "Sam",
+    "description": "",
+    "channels": [],
+    "last_saved": {
+      "fromIp": "",
+      "byUser": "",
+      "atTime": "",
+      "correlationId": ""
+    }
+  }
+]

@@ -1,0 +1,40 @@
+{
+    "description": "A Stage0 Bot",
+    "bsonType": "object",
+    "properties": {
+        "_id": {
+            "description": "The unique identifier for a Bot",
+            "bsonType": "objectId"
+        },
+        "status": {
+            "description": "Status",
+            "msmEnum": "default_status"
+        },
+        "name": {
+            "description": "Bot short name (Fran, Sam, Json",
+            "msmType": "msmWord"
+        },
+        "description": {
+            "description": "Bot Description",
+            "msmType": "msmSentence"
+        },
+        "channels": {
+            "description": "List of Discord Channel ID values",
+            "bsonType": "array",
+            "items": {
+                "msmType": "msmWord"
+            }
+        },
+        "last_saved": {
+            "description": "Last Saved breadcrumb",
+            "msmType": "breadcrumb"
+        }
+    },
+    "required": [
+        "_id",
+        "name",
+        "exercises",
+        "last_saved"
+    ],
+    "additionalProperties": false
+}
