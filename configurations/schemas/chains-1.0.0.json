@@ -8,7 +8,7 @@
         },
         "status": {
             "description": "Status",
-            "msmEnum": "default_status"
+            "msmEnums": "default_status"
         },
         "name": {
             "description": "Chain short name, like Kickoff or Retrospective",

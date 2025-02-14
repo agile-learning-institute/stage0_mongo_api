@@ -16,11 +16,11 @@
         },
         "name": {
             "description": "Exercise Name (found in Exercises)",
-            "msmType": "sentence"
+            "msmType": "msmSentence"
         },
         "status": {
             "description": "Exercise Status (Observe/Reflect/Make)",
-            "msmEnum": "exercise_status"
+            "msmEnums": "exercise_status"
         },
         "messages": {
             "description": "list of chat messages",

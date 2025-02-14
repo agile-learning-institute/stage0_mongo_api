@@ -8,15 +8,15 @@
         },
         "status": {
             "description": "Status",
-            "msmEnum": "default_status"
+            "msmEnums": "default_status"
         },
         "name": {
             "description": "name",
-            "msmType": "sentence"
+            "msmType": "msmSentence"
         }, 
         "description": {
             "description": "description",
-            "msmType": "paragraph"
+            "msmType": "msmParagraph"
         },
         "duration": {
             "description": "duration in minutes",
@@ -24,15 +24,15 @@
         },
         "observe_instructions": {
             "description": "observation exercise instructions",
-            "msmType": "paragraph"
+            "msmType": "msmParagraph"
         },
         "reflect_instructions": {
             "description": "reflect exercise instructions",
-            "msmType": "paragraph"
+            "msmType": "msmParagraph"
         },
         "make_instructions": {
             "description": "make exercise instructions",
-            "msmType": "paragraph"
+            "msmType": "msmParagraph"
         },
         "last_saved": {
             "description": "Last Saved breadcrumb",

@@ -4,6 +4,10 @@
         "status": "Active",
         "version": 0,
         "enumerators": {
+            "default_status": {
+                "Active": "Started but not finished",
+                "Archived": "Soft Delete Indicator"
+            },
             "workshop_status": {
                 "Pending": "Scheduled, but not started",
                 "Active": "Started but not finished",

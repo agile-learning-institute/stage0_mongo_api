@@ -1,4 +1,4 @@
-# From MongoDB Offical Image
+# From MSM Utility Image
 FROM ghcr.io/agile-learning-institute/msm:latest
 
 # Default environment configuration values
@@ -6,7 +6,7 @@ FROM ghcr.io/agile-learning-institute/msm:latest
 # ENV CONFIG_FOLDER=/opt/mongoSchemaManager/config
 # ENV MSM_ROOT=/opt/mongoSchemaManager
 # ENV LOAD_TEST_DATA=true
-# ENV DB_NAME=mentorHub
+# ENV DB_NAME=stage0
 
 # Copy files 
 COPY configurations /opt/mongoSchemaManager/configurations

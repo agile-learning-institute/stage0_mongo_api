@@ -4,11 +4,11 @@
 	"properties": {
 		"from": {
 			"description": "Starting Date/Time",
-			"msmType": "timestamp"
+			"bsonType": "date"
 		},
 		"to": {
 			"description": "Ending Date/Time",
-			"msmType": "timestamp"
+			"bsonType": "date"
 		}
 	},
 	"required": ["from", "to"],

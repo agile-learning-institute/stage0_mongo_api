@@ -14,9 +14,9 @@ local:
 # Build and run the Docker container
 container:
 	make down
-	docker build --tag local/test:latest .
+	docker build --tag local/stage0_msm:latest .
 	docker compose --profile testing up --detach
-	docker-compose logs -f "test"
+	docker-compose logs -f "stage0_msm"
 
 # Shut down testing containers and clean house
 down:

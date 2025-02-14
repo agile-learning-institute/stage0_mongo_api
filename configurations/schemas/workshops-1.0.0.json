@@ -8,23 +8,23 @@
         },
         "status": {
             "description": "Status",
-            "msmEnum": "workshop_status"
+            "msmEnums": "workshop_status"
         },
         "name": {
             "description": "Workshop Name (Channel Name)",
-            "msmType": "sentence"
+            "msmType": "msmSentence"
         },
         "category": {
             "description": "Discord Channel Category where this workshop channel is",
-            "msmType": "sentence"
+            "msmType": "msmSentence"
         },
         "guild": {
             "description": "Discord Server where this workshop takes place",
-            "msmType": "sentence"
+            "msmType": "msmSentence"
         },
         "purpose": {
             "description": "Workshop Purpose",
-            "msmType": "paragraph"
+            "msmType": "msmParagraph"
         },
         "when": {
             "description": "From-To Date/Time for the Workshop Event",
@@ -32,7 +32,7 @@
         },
         "current_exercise": {
             "description": "Index of the current exercise for Active workshops",
-            "msmType": "index"
+            "msmType": "count"
         },
         "exercises": {
             "description": "List of exercises",
@@ -43,7 +43,7 @@
                 "properties": {
                     "name": {
                         "description": "Exercise Name (found in Exercises)",
-                        "msmType": "sentence"
+                        "msmType": "msmSentence"
                     },
                     "messages": {
                         "description": "list of chat messages",
