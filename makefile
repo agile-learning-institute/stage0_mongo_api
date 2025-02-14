@@ -16,7 +16,7 @@ container:
 	make down
 	docker build --tag local/stage0_msm:latest .
 	docker compose --profile testing up --detach
-	docker-compose logs -f "stage0_msm"
+	docker-compose logs -f "test"
 
 # Shut down testing containers and clean house
 down:
