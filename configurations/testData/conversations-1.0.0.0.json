@@ -1,23 +1,23 @@
 [
   {          
-    "_id": "C00000000000000000000001",
-    "status": "",
+    "_id": {"$oid": "C00000000000000000000001"},
+    "status": "Active",
     "channel_id": "",
-    "version": "",
+    "version": "latest",
     "conversation": [
-      "",
-      ""
+      "Hi",
+      "Hello"
     ],
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": "",
+      "atTime": {"$date": "1/1/2025 12:34:56"},
       "correlationId": ""
     }
   },
   {
-    "_id": "C00000000000000000000002",
-    "status": "",
+    "_id": {"$oid": "C00000000000000000000002"},
+    "status": "Active",
     "channel_id": "",
     "version": "",
     "conversation": [
@@ -27,13 +27,13 @@
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": "",
+      "atTime": {"$date": "1/1/2025 12:34:56"},
       "correlationId": ""
     }
   },
   {
-    "_id": "C00000000000000000000003",
-    "status": "",
+    "_id": {"$oid": "C00000000000000000000003"},
+    "status": "Active",
     "channel_id": "",
     "version": "",
     "conversation": [
@@ -43,13 +43,13 @@
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": "",
+      "atTime": {"$date": "1/1/2025 12:34:56"},
       "correlationId": ""
     }
   },
   {
-    "_id": "C00000000000000000000004",
-    "status": "",
+    "_id": {"$oid": "C00000000000000000000004"},
+    "status": "Active",
     "channel_id": "",
     "version": "",
     "conversation": [
@@ -59,13 +59,13 @@
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": "",
+      "atTime": {"$date": "1/1/2025 12:34:56"},
       "correlationId": ""
     }
   },
   {
-    "_id": "C00000000000000000000005",
-    "status": "",
+    "_id": {"$oid": "C00000000000000000000005"},
+    "status": "Active",
     "channel_id": "",
     "version": "",
     "conversation": [
@@ -75,13 +75,13 @@
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": "",
+      "atTime": {"$date": "1/1/2025 12:34:56"},
       "correlationId": ""
     }
   },
   {
-    "_id": "C00000000000000000000006",
-    "status": "",
+    "_id": {"$oid": "C00000000000000000000006"},
+    "status": "Active",
     "channel_id": "",
     "version": "",
     "conversation": [
@@ -91,7 +91,7 @@
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": "",
+      "atTime": {"$date": "1/1/2025 12:34:56"},
       "correlationId": ""
     }
   }

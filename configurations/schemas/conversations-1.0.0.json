@@ -32,7 +32,8 @@
       }
     },
     "required": [
-      "id",
+      "_id",
+      "status",
       "channel_id",
       "version",
       "conversation",
