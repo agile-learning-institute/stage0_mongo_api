@@ -16,7 +16,7 @@
         }, 
         "description": {
             "description": "description",
-            "msmType": "msmParagraph"
+            "msmType": "paragraph"
         },
         "duration": {
             "description": "duration in minutes",
@@ -24,15 +24,15 @@
         },
         "observe_instructions": {
             "description": "observation exercise instructions",
-            "msmType": "msmParagraph"
+            "msmType": "paragraph"
         },
         "reflect_instructions": {
             "description": "reflect exercise instructions",
-            "msmType": "msmParagraph"
+            "msmType": "paragraph"
         },
         "make_instructions": {
             "description": "make exercise instructions",
-            "msmType": "msmParagraph"
+            "msmType": "paragraph"
         },
         "last_saved": {
             "description": "Last Saved breadcrumb",
