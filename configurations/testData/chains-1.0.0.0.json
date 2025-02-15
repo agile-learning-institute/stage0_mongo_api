@@ -13,14 +13,15 @@
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": "",
+      "atTime": {"$date": "1/1/2025 12:34:56"},
+
       "correlationId": ""
     }
   },
   {
     "_id": {"$oid": "A00000000000000000000002"},
     "status": "Active",
-    "name": "More Empathy",
+    "name": "+Empathy",
     "exercises": [
       {"$oid": "B00000000000000000000002"},
       {"$oid": "B00000000000000000000003"},
@@ -30,14 +31,15 @@
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": "",
+      "atTime": {"$date": "1/1/2025 12:34:56"},
+
       "correlationId": ""
     }
   },
   {
-    "_id": {"$oid": "A00000000000000000000002"},
+    "_id": {"$oid": "A00000000000000000000003"},
     "status": "Active",
-    "name": "More Hills",
+    "name": "+Hills",
     "exercises": [
       {"$oid": "B00000000000000000000003"},
       {"$oid": "B00000000000000000000004"},
@@ -46,12 +48,13 @@
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": "",
+      "atTime": {"$date": "1/1/2025 12:34:56"},
+
       "correlationId": ""
     }
   },
   {
-    "_id": {"$oid": "A00000000000000000000003"},
+    "_id": {"$oid": "A00000000000000000000004"},
     "status": "Active",
     "name": "Retrospective",
     "exercises": [
@@ -60,7 +63,8 @@
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": "",
+      "atTime": {"$date": "1/1/2025 12:34:56"},
+
       "correlationId": ""
     }
   }
