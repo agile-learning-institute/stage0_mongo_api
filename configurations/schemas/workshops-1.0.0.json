@@ -28,7 +28,7 @@
         },
         "purpose": {
             "description": "Workshop Purpose",
-            "msmType": "msmParagraph"
+            "msmType": "paragraph"
         },
         "when": {
             "description": "From-To Date/Time for the Workshop Event",
