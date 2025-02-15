@@ -1,0 +1,43 @@
+{
+    "title": "Conversation",
+    "description": "An exercise conducted during a stage0 Design Workshop, with observations",
+    "bsonType": "object",
+    "properties": {
+      "_id": {
+        "description": "The unique identifier for a conversation mongo document",
+        "bsonType": "objectId"
+      },
+      "status": {
+        "description": "The unique identifier for a conversation mongo document",
+        "msmEnums": "default_status"
+      },
+      "channel_id": {
+        "description": "The Discord channel_id this conversation is taking place in",
+        "msmType": "msmWord"
+      },
+      "version": {
+        "description": "Either 'latest' or the date the conversation was archived",
+        "msmType": "msmWord"
+      },
+      "conversation": {
+        "description": "Messages in the conversation",
+        "bsonType": "array",
+        "items": {
+          "bsonType": "string"
+        }
+      },
+      "last_saved": {
+        "description": "Last Saved breadcrumb",
+        "msmType": "breadcrumb"
+      }
+    },
+    "required": [
+      "id",
+      "channel_id",
+      "version",
+      "conversation",
+      "last_saved"
+    ],
+    "additionalProperties": false
+  }
+  

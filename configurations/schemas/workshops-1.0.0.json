@@ -10,7 +10,11 @@
             "description": "Status",
             "msmEnums": "workshop_status"
         },
-        "name": {
+        "channel_id": {
+            "description": "The discord identifier for the channel this workshop is hosted on",
+            "msmType": "msmWord"
+        },
+        "channel_name": {
             "description": "Workshop Name (Channel Name)",
             "msmType": "msmSentence"
         },
@@ -41,16 +45,21 @@
                 "description": "A record of a specific design thinking workshop exercise.",
                 "bsonType": "object",
                 "properties": {
-                    "name": {
-                        "description": "Exercise Name (found in Exercises)",
-                        "msmType": "msmSentence"
+                    "exercise_id": {
+                        "description": "The Exercise Instructions this is using",
+                        "bsonType": "objectId"
                     },
-                    "messages": {
-                        "description": "list of chat messages",
-                        "bsonType": "array",
-                        "items": {
-                            "msmType": "markdown"
-                        }
+                    "conversation_id": {
+                        "description": "The _id of the conversation for this exercise",
+                        "bsonType": "objectId"
+                    },
+                    "status": {
+                        "description": "The exercise status or state (Observe/Reflect/Make)",
+                        "msmEnums": "exercise_status"
+                    },
+                    "duration": {
+                        "description": "Time when the exercise started",
+                        "msmType": "appointment"
                     },
                     "observations": {
                         "description": "list of Observations made during this exercise",
@@ -60,7 +69,12 @@
                         }
                     }
                 },
-                "required": ["name","messages"],
+                "required": [
+                    "exercise_id",
+                    "conversation_id",
+                    "status",
+                    "observations"
+                ],
                 "additionalProperties": false
             }
         },
@@ -69,6 +83,12 @@
             "msmType": "breadcrumb"
         }
     },
-    "required": ["_id", "status", "name", "exercises", "last_saved"],
+    "required": [
+        "_id",
+        "status",
+        "channel_id",
+        "exercises",
+        "last_saved"
+    ],
     "additionalProperties": false
 }
