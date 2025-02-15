@@ -30,11 +30,5 @@
             "msmType": "breadcrumb"
         }
     },
-    "required": [
-        "_id",
-        "name",
-        "exercises",
-        "last_saved"
-    ],
     "additionalProperties": false
 }
