@@ -49,10 +49,6 @@
                         "description": "The Exercise Instructions this is using",
                         "bsonType": "objectId"
                     },
-                    "conversation_id": {
-                        "description": "The _id of the conversation for this exercise",
-                        "bsonType": "objectId"
-                    },
                     "status": {
                         "description": "The exercise status or state (Observe/Reflect/Make)",
                         "msmEnums": "exercise_status"
@@ -71,7 +67,6 @@
                 },
                 "required": [
                     "exercise_id",
-                    "conversation_id",
                     "status",
                     "observations"
                 ],

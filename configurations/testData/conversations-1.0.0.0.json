@@ -2,7 +2,7 @@
   {          
     "_id": {"$oid": "C00000000000000000000001"},
     "status": "Active",
-    "channel_id": "",
+    "name": "",
     "version": "latest",
     "conversation": [
       "Hi",
@@ -18,7 +18,7 @@
   {
     "_id": {"$oid": "C00000000000000000000002"},
     "status": "Active",
-    "channel_id": "",
+    "name": "",
     "version": "",
     "conversation": [
       "",
@@ -34,7 +34,7 @@
   {
     "_id": {"$oid": "C00000000000000000000003"},
     "status": "Active",
-    "channel_id": "",
+    "name": "",
     "version": "",
     "conversation": [
       "",
@@ -50,7 +50,7 @@
   {
     "_id": {"$oid": "C00000000000000000000004"},
     "status": "Active",
-    "channel_id": "",
+    "name": "",
     "version": "",
     "conversation": [
       "",
@@ -66,7 +66,7 @@
   {
     "_id": {"$oid": "C00000000000000000000005"},
     "status": "Active",
-    "channel_id": "",
+    "name": "",
     "version": "",
     "conversation": [
       "",
@@ -82,7 +82,7 @@
   {
     "_id": {"$oid": "C00000000000000000000006"},
     "status": "Active",
-    "channel_id": "",
+    "name": "",
     "version": "",
     "conversation": [
       "",

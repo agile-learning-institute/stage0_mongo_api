@@ -15,7 +15,6 @@
     "exercises": [
       {
         "exercise_id": {"$oid": "B00000000000000000000001"},
-        "conversation_id": {"$oid": "C00000000000000000000001"},
         "status": "Pending",
         "duration": {
           "from": {"$date": "1/2/2025 12:10:00"},
@@ -28,7 +27,6 @@
       },
       {
         "exercise_id": {"$oid": "B00000000000000000000002"},
-        "conversation_id": {"$oid": "C00000000000000000000001"},
         "status": "Pending",
         "duration": {
           "from": {"$date": "1/2/2025 12:10:00"},
@@ -65,7 +63,6 @@
     "exercises": [
       {
         "exercise_id": {"$oid": "B00000000000000000000003"},
-        "conversation_id": {"$oid": "C00000000000000000000001"},
         "status": "Pending",
         "duration": {
           "from": {"$date": "1/2/2025 12:10:00"},
@@ -78,7 +75,6 @@
       },
       {
         "exercise_id": {"$oid": "B00000000000000000000004"},
-        "conversation_id": {"$oid": "C00000000000000000000001"},
         "status": "Pending",
         "duration": {
           "from": {"$date": "1/2/2025 12:10:00"},
@@ -115,7 +111,6 @@
     "exercises": [
       {
         "exercise_id": {"$oid": "B00000000000000000000005"},
-        "conversation_id": {"$oid": "C00000000000000000000001"},
         "status": "Pending",
         "duration": {
           "from": {"$date": "1/2/2025 12:10:00"},
@@ -128,7 +123,6 @@
       },
       {
         "exercise_id": {"$oid": "B00000000000000000000001"},
-        "conversation_id": {"$oid": "C00000000000000000000001"},
         "status": "Pending",
         "duration": {
           "from": {"$date": "1/2/2025 12:10:00"},

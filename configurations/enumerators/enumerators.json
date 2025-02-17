@@ -21,6 +21,13 @@
                 "Make": "Make a decision as a Team",
                 "Complete": "Exercise Completed"
             },
+            "conversation_status": {
+                "Active": "An active conversation",
+                "Paused": "An in-active conversation",
+                "Full": "A full conversation with a version date",
+                "Completed": "A completed conversation",
+                "Archived": "Soft Delete Indicator"
+            },
             "roles": {
                 "Facilitator": "A Design Thinking Facilitator",
                 "Engineer": "A Stage0 AI Engineer",

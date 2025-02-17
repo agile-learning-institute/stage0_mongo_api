@@ -8,15 +8,15 @@
         "bsonType": "objectId"
       },
       "status": {
-        "description": "The unique identifier for a conversation mongo document",
-        "msmEnums": "default_status"
+        "description": "The Status of the Conversation",
+        "msmEnums": "conversation_status"
       },
-      "channel_id": {
+      "name": {
         "description": "The Discord channel_id this conversation is taking place in",
         "msmType": "msmWord"
       },
       "version": {
-        "description": "Either 'latest' or the date the conversation was archived",
+        "description": "Either 'latest' or the date the status was set to Full.",
         "msmType": "msmWord"
       },
       "conversation": {
@@ -34,7 +34,6 @@
     "required": [
       "_id",
       "status",
-      "channel_id",
       "version",
       "conversation",
       "last_saved"
