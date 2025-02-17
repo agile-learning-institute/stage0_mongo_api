@@ -5,34 +5,34 @@
         "version": 0,
         "enumerators": {
             "default_status": {
-                "Active": "Started but not finished",
-                "Archived": "Soft Delete Indicator"
+                "active": "Started but not finished",
+                "archived": "Soft Delete Indicator"
             },
             "workshop_status": {
-                "Pending": "Scheduled, but not started",
-                "Active": "Started but not finished",
-                "Complete": "Finished",
-                "Archived": "Soft Delete Indicator"
+                "pending": "Scheduled, but not started",
+                "active": "Started but not finished",
+                "complete": "Finished",
+                "archived": "Soft Delete Indicator"
             },
             "exercise_status": {
-                "Pending": "Waiting to start",
-                "Observe": "Observe as Individuals",
-                "Reflect": "Reflect as a Team",
-                "Make": "Make a decision as a Team",
-                "Complete": "Exercise Completed"
+                "pending": "Waiting to start",
+                "observe": "Observe as Individuals",
+                "reflect": "Reflect as a Team",
+                "make": "Make a decision as a Team",
+                "complete": "Exercise Completed"
             },
             "conversation_status": {
-                "Active": "An active conversation",
-                "Paused": "An in-active conversation",
-                "Full": "A full conversation with a version date",
-                "Completed": "A completed conversation",
-                "Archived": "Soft Delete Indicator"
+                "active": "An active conversation",
+                "paused": "An in-active conversation",
+                "full": "A full conversation with a version date",
+                "completed": "A completed conversation",
+                "archived": "Soft Delete Indicator"
             },
             "roles": {
-                "Facilitator": "A Design Thinking Facilitator",
-                "Engineer": "A Stage0 AI Engineer",
-                "Practitioner": "A Design Thinking Practitioner",
-                "Administrator": "A Super User"
+                "facilitator": "A Design Thinking Facilitator",
+                "engineer": "A Stage0 AI Engineer",
+                "practitioner": "A Design Thinking Practitioner",
+                "administrator": "A Super User"
             }
         }
     }
