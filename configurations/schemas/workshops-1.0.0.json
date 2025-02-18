@@ -10,13 +10,13 @@
             "description": "Status",
             "msmEnums": "workshop_status"
         },
-        "channel_id": {
-            "description": "The discord identifier for the channel this workshop is hosted on",
-            "msmType": "msmWord"
-        },
         "name": {
             "description": "Workshop Name (Channel Name)",
             "msmType": "msmSentence"
+        },
+        "channel_id": {
+            "description": "The discord identifier for the channel this workshop is hosted on",
+            "msmType": "msmWord"
         },
         "category": {
             "description": "Discord Channel Category where this workshop channel is",
@@ -81,7 +81,6 @@
     "required": [
         "_id",
         "status",
-        "channel_id",
         "exercises",
         "last_saved"
     ],

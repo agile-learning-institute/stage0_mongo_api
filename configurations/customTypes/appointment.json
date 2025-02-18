@@ -11,6 +11,5 @@
 			"bsonType": "date"
 		}
 	},
-	"required": ["from", "to"],
 	"additionalProperties": false
 }
