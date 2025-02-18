@@ -1,9 +1,9 @@
 [
   {
     "_id": {"$oid": "000000000000000000000000"},
-    "status": "Pending",
+    "status": "pending",
     "channel_id": "",
-    "channel_name": "Pending Empty",
+    "channel_name": "pending Empty",
     "category": "",
     "guild": "",
     "purpose": "",
@@ -15,7 +15,7 @@
     "exercises": [
       {
         "exercise_id": {"$oid": "B00000000000000000000001"},
-        "status": "Pending",
+        "status": "pending",
         "duration": {
           "from": {"$date": "1/2/2025 12:10:00"},
           "to": {"$date": "1/2/2025 12:15:00"}
@@ -27,7 +27,7 @@
       },
       {
         "exercise_id": {"$oid": "B00000000000000000000002"},
-        "status": "Pending",
+        "status": "pending",
         "duration": {
           "from": {"$date": "1/2/2025 12:10:00"},
           "to": {"$date": "1/2/2025 12:15:00"}
@@ -49,9 +49,9 @@
     "_id": {
       "$oid": "000000000000000000000001"
     },
-    "status": "Pending",
+    "status": "pending",
     "channel_id": "",
-    "channel_name": "Pending Empty",
+    "channel_name": "pending Empty",
     "category": "",
     "guild": "",
     "purpose": "",
@@ -63,7 +63,7 @@
     "exercises": [
       {
         "exercise_id": {"$oid": "B00000000000000000000003"},
-        "status": "Pending",
+        "status": "pending",
         "duration": {
           "from": {"$date": "1/2/2025 12:10:00"},
           "to": {"$date": "1/2/2025 12:15:00"}
@@ -75,7 +75,7 @@
       },
       {
         "exercise_id": {"$oid": "B00000000000000000000004"},
-        "status": "Pending",
+        "status": "pending",
         "duration": {
           "from": {"$date": "1/2/2025 12:10:00"},
           "to": {"$date": "1/2/2025 12:15:00"}
@@ -97,9 +97,9 @@
     "_id": {
       "$oid": "000000000000000000000002"
     },
-    "status": "Pending",
+    "status": "pending",
     "channel_id": "",
-    "channel_name": "Pending Empty",
+    "channel_name": "pending Empty",
     "category": "",
     "guild": "",
     "purpose": "",
@@ -111,7 +111,7 @@
     "exercises": [
       {
         "exercise_id": {"$oid": "B00000000000000000000005"},
-        "status": "Pending",
+        "status": "pending",
         "duration": {
           "from": {"$date": "1/2/2025 12:10:00"},
           "to": {"$date": "1/2/2025 12:15:00"}
@@ -123,7 +123,7 @@
       },
       {
         "exercise_id": {"$oid": "B00000000000000000000001"},
-        "status": "Pending",
+        "status": "pending",
         "duration": {
           "from": {"$date": "1/2/2025 12:10:00"},
           "to": {"$date": "1/2/2025 12:15:00"}

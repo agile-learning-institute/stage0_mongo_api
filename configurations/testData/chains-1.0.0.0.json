@@ -1,7 +1,7 @@
 [
   {
     "_id": {"$oid": "A00000000000000000000001"},
-    "status": "Active",
+    "status": "active",
     "name": "Kickoff",
     "exercises": [
       {"$oid": "B00000000000000000000001"},
@@ -20,7 +20,7 @@
   },
   {
     "_id": {"$oid": "A00000000000000000000002"},
-    "status": "Active",
+    "status": "active",
     "name": "+Empathy",
     "exercises": [
       {"$oid": "B00000000000000000000002"},
@@ -38,7 +38,7 @@
   },
   {
     "_id": {"$oid": "A00000000000000000000003"},
-    "status": "Active",
+    "status": "active",
     "name": "+Hills",
     "exercises": [
       {"$oid": "B00000000000000000000003"},
@@ -55,7 +55,7 @@
   },
   {
     "_id": {"$oid": "A00000000000000000000004"},
-    "status": "Active",
+    "status": "active",
     "name": "Retrospective",
     "exercises": [
       {"$oid": "B00000000000000000000005"}

@@ -3,7 +3,7 @@
     "_id": {
       "$oid": "BBB000000000000000000001"
     },
-    "status": "Active",
+    "status": "active",
     "name": "Fran",
     "description": "",
     "channels": [],
@@ -18,7 +18,7 @@
     "_id": {
       "$oid": "BBB000000000000000000002"
     },
-    "status": "Active",
+    "status": "active",
     "name": "Json",
     "description": "",
     "channels": [],
@@ -33,7 +33,7 @@
     "_id": {
       "$oid": "BBB000000000000000000003"
     },
-    "status": "Active",
+    "status": "active",
     "name": "Sam",
     "description": "",
     "channels": [],

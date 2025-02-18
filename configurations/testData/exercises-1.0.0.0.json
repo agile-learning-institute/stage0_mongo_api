@@ -1,7 +1,7 @@
 [
   {
     "_id": {"$oid": "B00000000000000000000001"},
-    "status": "Active",
+    "status": "active",
     "name": "Stakeholders",
     "description": "",
     "duration": 0,
@@ -17,7 +17,7 @@
   },
   {
     "_id": {"$oid": "B00000000000000000000002"},
-    "status": "Active",
+    "status": "active",
     "name": "EmpathyMap",
     "description": "",
     "duration": 0,
@@ -33,7 +33,7 @@
   },
   {
     "_id": {"$oid": "B00000000000000000000003"},
-    "status": "Active",
+    "status": "active",
     "name": "Hills",
     "description": "",
     "duration": 0,
@@ -49,7 +49,7 @@
   },
   {
     "_id": {"$oid": "B00000000000000000000004"},
-    "status": "Active",
+    "status": "active",
     "name": "PriorityGrid",
     "description": "",
     "duration": 0,
@@ -65,7 +65,7 @@
   },
   {
     "_id": {"$oid": "B00000000000000000000005"},
-    "status": "Active",
+    "status": "active",
     "name": "Feedback",
     "description": "",
     "duration": 0,

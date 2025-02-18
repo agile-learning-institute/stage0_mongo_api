@@ -1,7 +1,7 @@
 [
   {          
     "_id": {"$oid": "C00000000000000000000001"},
-    "status": "Active",
+    "status": "active",
     "name": "",
     "version": "latest",
     "conversation": [
@@ -17,7 +17,7 @@
   },
   {
     "_id": {"$oid": "C00000000000000000000002"},
-    "status": "Active",
+    "status": "active",
     "name": "",
     "version": "",
     "conversation": [
@@ -33,7 +33,7 @@
   },
   {
     "_id": {"$oid": "C00000000000000000000003"},
-    "status": "Active",
+    "status": "active",
     "name": "",
     "version": "",
     "conversation": [
@@ -49,7 +49,7 @@
   },
   {
     "_id": {"$oid": "C00000000000000000000004"},
-    "status": "Active",
+    "status": "active",
     "name": "",
     "version": "",
     "conversation": [
@@ -65,7 +65,7 @@
   },
   {
     "_id": {"$oid": "C00000000000000000000005"},
-    "status": "Active",
+    "status": "active",
     "name": "",
     "version": "",
     "conversation": [
@@ -81,7 +81,7 @@
   },
   {
     "_id": {"$oid": "C00000000000000000000006"},
-    "status": "Active",
+    "status": "active",
     "name": "",
     "version": "",
     "conversation": [
