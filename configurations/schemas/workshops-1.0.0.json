@@ -14,7 +14,7 @@
             "description": "The discord identifier for the channel this workshop is hosted on",
             "msmType": "msmWord"
         },
-        "channel_name": {
+        "name": {
             "description": "Workshop Name (Channel Name)",
             "msmType": "msmSentence"
         },
