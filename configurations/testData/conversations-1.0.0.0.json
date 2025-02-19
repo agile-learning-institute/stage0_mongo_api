@@ -2,7 +2,7 @@
   {          
     "_id": {"$oid": "C00000000000000000000001"},
     "status": "active",
-    "name": "",
+    "name": "DISCORD_01",
     "version": "latest",
     "conversation": [
       "Hi",
@@ -18,8 +18,8 @@
   {
     "_id": {"$oid": "C00000000000000000000002"},
     "status": "active",
-    "name": "",
-    "version": "",
+    "name": "DISCORD_02",
+    "version": "latest",
     "conversation": [
       "",
       ""
@@ -34,8 +34,8 @@
   {
     "_id": {"$oid": "C00000000000000000000003"},
     "status": "active",
-    "name": "",
-    "version": "",
+    "name": "Test_01",
+    "version": "latest",
     "conversation": [
       "",
       ""
@@ -49,9 +49,9 @@
   },
   {
     "_id": {"$oid": "C00000000000000000000004"},
-    "status": "active",
-    "name": "",
-    "version": "",
+    "status": "full",
+    "name": "Test_01",
+    "version": "2025-01-01T12:34:56",
     "conversation": [
       "",
       ""
@@ -65,9 +65,9 @@
   },
   {
     "_id": {"$oid": "C00000000000000000000005"},
-    "status": "active",
-    "name": "",
-    "version": "",
+    "status": "paused",
+    "name": "Paused_Test",
+    "version": "latest",
     "conversation": [
       "",
       ""
@@ -81,9 +81,9 @@
   },
   {
     "_id": {"$oid": "C00000000000000000000006"},
-    "status": "active",
-    "name": "",
-    "version": "",
+    "status": "full",
+    "name": "Test_01",
+    "version": "2025-02-01T12:34:56",
     "conversation": [
       "",
       ""
