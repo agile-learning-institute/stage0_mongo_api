@@ -5,13 +5,13 @@
     },
     "status": "active",
     "name": "Fran",
-    "description": "",
-    "channels": [],
+    "description": "Fran the Design Thinking Facilitator",
+    "channels": ["TEST_CHANNEL_1", "TEST_CHANNEL_2"],
     "last_saved": {
-      "fromIp": "",
-      "byUser": "",
+      "fromIp": "127.0.0.1",
+      "byUser": "USER_1",
       "atTime": {"$date": "1/1/2025 12:34:56"},
-      "correlationId": ""
+      "correlationId": "CORR1"
     }
   },
   {
