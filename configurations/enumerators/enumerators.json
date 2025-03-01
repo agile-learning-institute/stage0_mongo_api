@@ -28,6 +28,11 @@
                 "completed": "A completed conversation",
                 "archived": "Soft Delete Indicator"
             },
+            "llm_message_roles": {
+                "system": "System Prompt",
+                "assistant": "LLM Responding to User Prompts",
+                "user": "LLM User sending prompts to the model"
+            },
             "roles": {
                 "facilitator": "A Design Thinking Facilitator",
                 "engineer": "A Stage0 AI Engineer",

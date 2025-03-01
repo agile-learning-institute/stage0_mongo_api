@@ -1,40 +1,58 @@
 {
-    "title": "Conversation",
-    "description": "An exercise conducted during a stage0 Design Workshop, with observations",
-    "bsonType": "object",
-    "properties": {
-      "_id": {
-        "description": "The unique identifier for a conversation mongo document",
-        "bsonType": "objectId"
-      },
-      "status": {
-        "description": "The Status of the Conversation",
-        "msmEnums": "conversation_status"
-      },
-      "name": {
-        "description": "The Discord channel_id this conversation is taking place in",
-        "msmType": "msmWord"
-      },
-      "version": {
-        "description": "Either 'latest' or the date the status was set to Full.",
-        "msmType": "msmWord"
-      },
-      "conversation": {
-        "description": "Messages in the conversation",
-        "bsonType": "array"
-      },
-      "last_saved": {
-        "description": "Last Saved breadcrumb",
-        "msmType": "breadcrumb"
+  "title": "Conversation",
+  "description": "An exercise conducted during a stage0 Design Workshop, with observations",
+  "bsonType": "object",
+  "properties": {
+    "_id": {
+      "description": "The unique identifier for a conversation mongo document",
+      "bsonType": "objectId"
+    },
+    "channel_id": {
+      "description": "The Discord channel_id this conversation is taking place in",
+      "msmType": "msmWord"
+    },
+    "status": {
+      "description": "The Status of the Conversation",
+      "msmEnums": "conversation_status"
+    },
+    "version": {
+      "description": "Either 'latest' or the date the status was set to Full.",
+      "msmType": "msmWord"
+    },
+    "messages": {
+      "description": "List of Messages in the conversation",
+      "bsonType": "array",
+      "items": {
+        "description": "A Message",
+        "bsonType": "object",
+        "properties": {
+          "role": {
+            "description": "Messages in the conversation",
+            "msmEnums": "llm_message_roles"
+          },
+          "content": {
+            "description": "The message content",
+            "bsonType": "string"
+          }
+        },
+        "required": [
+          "role",
+          "content"
+        ],
+        "additionalProperties": false
       }
     },
-    "required": [
-      "_id",
-      "status",
-      "version",
-      "conversation",
-      "last_saved"
-    ],
-    "additionalProperties": false
-  }
-  
+    "last_saved": {
+      "description": "Last Saved breadcrumb",
+      "msmType": "breadcrumb"
+    }
+  },
+  "required": [
+    "_id",
+    "status",
+    "version",
+    "messages",
+    "last_saved"
+  ],
+  "additionalProperties": false
+}
