@@ -21,10 +21,7 @@
       },
       "conversation": {
         "description": "Messages in the conversation",
-        "bsonType": "array",
-        "items": {
-          "bsonType": "string"
-        }
+        "bsonType": "array"
       },
       "last_saved": {
         "description": "Last Saved breadcrumb",
