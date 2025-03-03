@@ -25,7 +25,7 @@
                 "active": "An active conversation",
                 "paused": "An in-active conversation",
                 "full": "A full conversation with a version date",
-                "completed": "A completed conversation",
+                "completed": "A completed conversation with a version date",
                 "archived": "Soft Delete Indicator"
             },
             "llm_message_roles": {
