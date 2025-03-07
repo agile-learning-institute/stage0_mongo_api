@@ -23,6 +23,7 @@
             },
             "conversation_status": {
                 "active": "An active conversation",
+                "named": "A named conversation, allows you to load information into a conversation",
                 "paused": "An in-active conversation",
                 "full": "A full conversation with a version date",
                 "complete": "A completed conversation with a version date",

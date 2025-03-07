@@ -8,8 +8,12 @@
       "bsonType": "objectId"
     },
     "channel_id": {
-      "description": "The Discord channel_id this conversation is taking place in",
+      "description": "The Discord channel_id this conversation is taking place in, or for Named conversation the Name",
       "msmType": "msmWord"
+    },
+    "description": {
+      "description": "The Description - typically only for Named conversations.",
+      "msmType": "msmSentence"
     },
     "status": {
       "description": "The Status of the Conversation",
