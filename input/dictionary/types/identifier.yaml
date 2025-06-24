@@ -1,4 +1,4 @@
-title: Identity
+title: Identifier
 description: A unique identifier for a document
 json_type:
   type: string

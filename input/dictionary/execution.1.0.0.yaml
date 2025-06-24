@@ -9,16 +9,20 @@ properties:
   status:
     description: The status of execution. Running, Succeeded, Failed
     type: enum
-    enums: runbook_status
+    enums: default_status
     required: true
   input_provided:
     description: The input data provided to the runbook
     type: object
     required: true
+    properties:
+    additionalProperties: true
   output_received:
     description: The output data returned to the runbook
     type: object
     required: true
+    properties:
+    additionalProperties: true
   breadcrumb:
     description: Audit tracking breadcrumb
     type: breadcrumb

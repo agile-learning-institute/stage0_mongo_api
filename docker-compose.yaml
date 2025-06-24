@@ -1,32 +1,55 @@
 # docker-compose.yaml for stage0_mongodb_api testing
 
 services:
-  mongodb-server:
+  mongodb:
     image: mongo:7.0.5
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
     ports:
       - "27017:27017"
+    extra_hosts:
+      - "mongodb:127.0.0.1"
     healthcheck:
-      test: ["CMD", "mongosh", "-u", "root", "-p", "example", "--authenticationDatabase", "admin", "--eval", "db.adminCommand('ping')"]
-      interval: 2s
-      timeout: 2s
-      retries: 15
+      test: echo "try { rs.status() } catch (err) { rs.initiate({_id:'rs0',members:[{_id:0,host:'mongodb:27017'}]}) }" | mongosh --port 27017 --quiet
+      interval: 5s
+      timeout: 30s
+      start_period: 0s
+      retries: 30
+    command: ["--replSet", "rs0", "--bind_ip_all", "--port", "27017"]
+    profiles:
+      - batch_test
+      - interactive_test
 
   stage0_mongodb_api:
     image: ghcr.io/agile-learning-institute/stage0_mongodb_api:latest
     restart: no
     ports:
-      - "8582:8582"
+      - "8081:8081"
     volumes:
-    - ./tests/test_cases/large_sample:/input
+    - ./input:/input
     environment:
-      MONGO_CONNECTION_STRING: mongodb://root:example@mongodb-server:27017
-      MONGO_DB_NAME: test_database
+      MONGO_CONNECTION_STRING: mongodb://mongodb:27017/?replicaSet=rs0
+      MONGO_DB_NAME: stage0
+      MONGODB_API_PORT: 8081
+      AUTO_PROCESS: True
+      LOAD_TEST_DATA: True
+      EXIT_AFTER_PROCESSING: True
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    profiles:
+      - batch_test
+
+  stage0_mongo_api:
+    image: ghcr.io/agile-learning-institute/stage0_mongo_api:latest
+    restart: no
+    ports:
+      - "8582:8582"
+    environment:
+      MONGO_CONNECTION_STRING: mongodb://mongodb:27017/?replicaSet=rs0
       MONGODB_API_PORT: 8582
       AUTO_PROCESS: True
       LOAD_TEST_DATA: True
     depends_on:
-      mongodb-server:
+      mongodb:
         condition: service_healthy
+    profiles:
+      - interactive_test

@@ -9,7 +9,7 @@ properties:
   status:
     description: Status of this user
     type: enum
-    enums: user_status
+    enums: default_status
     required: true
   name:
     description: A Users Name

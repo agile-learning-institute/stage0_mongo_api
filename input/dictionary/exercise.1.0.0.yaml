@@ -17,7 +17,7 @@ properties:
     required: true
   description:
     description: description
-    type: paragraph
+    type: markdown
   duration:
     description: planned duration in minutes
     type: count

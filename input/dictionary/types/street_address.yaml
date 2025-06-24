@@ -5,6 +5,7 @@ properties:
   street:
     description: Street address
     type: sentence
+    required: true
   city:
     description: City
     type: word
@@ -14,4 +15,4 @@ properties:
   postal_code:
     description: Postal code
     type: word
-  required: true
+    required: true

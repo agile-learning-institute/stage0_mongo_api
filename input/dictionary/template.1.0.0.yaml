@@ -9,7 +9,7 @@ properties:
   status:
     description: The status of the template
     type: enum
-    enums: template_status
+    enums: default_status
     required: true
   name:
     description: The Name of the template
@@ -17,8 +17,7 @@ properties:
     required: true
   architecture:
     description: The architecture this template supports
-    type: enum
-    enums: architectures
+    type: sentence
   description:
     description: The description of the template
     type: markdown

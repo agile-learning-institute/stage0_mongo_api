@@ -19,6 +19,7 @@ properties:
     description: List of Exercise IDs
     type: array
     items:
+      description: An Exercise ID
       type: identifier
     required: true
   last_saved:

@@ -27,6 +27,7 @@ properties:
     type: array
     required: true
     items:
+      description: A message in the conversation
       type: object
       properties:
         role:

@@ -3,24 +3,17 @@
 .PHONY: local container down
 
 # Run the application locally
-local:
+test:
 	make down
-	docker compose --profile msmtest up --detach
-	docker-compose logs -f "msm"
-	rm -rf ./docs/
-	mkdir -p ./docs/
-	ls -1 ./configurations/openApi | grep -v empty | xargs -I{} mv ./configurations/openApi/{} ./docs/
+	docker compose --profile batch_test up --detach
+	docker compose logs -f "stage0_mongodb_api"
 
 # Build and run the Docker container
 container:
 	make down
-	docker build --tag local/stage0_msm:latest .
-	docker compose --profile testing up --detach
-	docker-compose logs -f "test"
+	docker build --tag ghcr.io/agile-learning-institute/stage0_mongo_api:latest .
+	docker compose --profile interactive_test up --detach
 
 # Shut down testing containers and clean house
 down:
-	docker compose --profile msmtest down
-	docker compose --profile testing down
-	docker image prune -f
-	docker volume prune -f
+	docker compose down mongodb stage0_mongodb_api stage0_mongo_api
