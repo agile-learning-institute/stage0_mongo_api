@@ -24,17 +24,19 @@ one_of:
       type: object
       properties:
         persona: 
-          name:
-            description: Name of the persona
-            type: word
-          description: 
-            description: Description of the persona
-            type: sentence
-          observations:
-            description: Empathy Observations
-            type: array
-            items:
-              $ref: observation_empathy.1.0.0
+          type: object
+          properties:
+            name:
+              description: Name of the persona
+              type: word
+            description: 
+              description: Description of the persona
+              type: sentence
+            observations:
+              description: Empathy Observations
+              type: array
+              items:
+                $ref: observation_empathy.1.0.0
     hills: 
       description: Hills of the exercise
       type: object
@@ -43,7 +45,7 @@ one_of:
           description: Hills Observations
           type: array
           items:
-            $ref: observation_hills
+            $ref: observation_hills.1.0.0
     priority: 
       description: Priority of the exercise
       type: object
@@ -54,10 +56,7 @@ one_of:
           items:
             $ref: observation_priority.1.0.0
         outcome:
-          description: Priority Outcomes
-          type: object
-          properties:
-            $ref: observation_ranking.1.0.0
+          $ref: observation_ranking.1.0.0
     retrospective: 
       description: Retrospective of the exercise
       type: object

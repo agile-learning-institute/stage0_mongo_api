@@ -14,15 +14,13 @@ properties:
   input_provided:
     description: The input data provided to the runbook
     type: object
-    required: true
-    properties:
     additionalProperties: true
+    required: true
   output_received:
     description: The output data returned to the runbook
     type: object
-    required: true
-    properties:
     additionalProperties: true
+    required: true
   breadcrumb:
     description: Audit tracking breadcrumb
     type: breadcrumb

@@ -13,6 +13,7 @@ properties:
     type: array
     items:
       description: Hill Name
+      type: word
   utilities:
     description: Hills that are low impact, but high feasibility
     type: array
