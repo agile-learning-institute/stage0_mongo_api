@@ -1,0 +1,82 @@
+[
+  {
+    "_id": {"$oid": "E00000000000000000000001"},
+    "status": "active",
+    "name": "Stakeholders",
+    "description": "Stakeholders Exercise",
+    "duration": 0,
+    "observe_instructions": "",
+    "reflect_instructions": "",
+    "make_instructions": "",
+    "last_saved": {
+      "at_time": {"$date": "1/1/2025 12:34:56"},
+      "by_user": "",
+      "from_ip": "",
+      "correlation_id": ""
+    }
+  },
+  {
+    "_id": {"$oid": "E00000000000000000000002"},
+    "status": "active",
+    "name": "EmpathyMap",
+    "description": "Empathy Mapping exercise",
+    "duration": 0,
+    "observe_instructions": "",
+    "reflect_instructions": "",
+    "make_instructions": "",
+    "last_saved": {
+      "at_time": {"$date": "1/1/2025 12:34:56"},
+      "by_user": "",
+      "from_ip": "",
+      "correlation_id": ""
+    }
+  },
+  {
+    "_id": {"$oid": "E00000000000000000000003"},
+    "status": "active",
+    "name": "Hills",
+    "description": "Hills of the exercise",
+    "duration": 0,
+    "observe_instructions": "",
+    "reflect_instructions": "",
+    "make_instructions": "",
+    "last_saved": {
+      "at_time": {"$date": "1/1/2025 12:34:56"},
+      "by_user": "",
+      "from_ip": "",
+      "correlation_id": ""
+    }
+  },
+  {
+    "_id": {"$oid": "E00000000000000000000004"},
+    "status": "active",
+    "name": "PriorityGrid",
+    "description": "Priority Grid exercise",
+    "duration": 0,
+    "observe_instructions": "",
+    "reflect_instructions": "",
+    "make_instructions": "",
+    "last_saved": {
+      "at_time": {"$date": "1/1/2025 12:34:56"},
+      "by_user": "",
+      "from_ip": "",
+      "correlation_id": ""
+    }
+  },
+  {
+    "_id": {"$oid": "E00000000000000000000005"},
+    "status": "active",
+    "name": "Feedback",
+    "description": "Feedback exercise",
+    "duration": 0,
+    "observe_instructions": "",
+    "reflect_instructions": "",
+    "make_instructions": "",
+    "last_saved": {
+      "at_time": {"$date": "1/1/2025 12:34:56"},
+      "by_user": "",
+      "from_ip": "",
+      "correlation_id": ""
+    }
+  }
+]

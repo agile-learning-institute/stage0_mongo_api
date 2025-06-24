@@ -1,4 +1,4 @@
-# version: '3.1'
+# docker-compose.yaml for stage0_mongodb_api testing
 
 services:
   mongodb-server:
@@ -13,32 +13,20 @@ services:
       interval: 2s
       timeout: 2s
       retries: 15
-    profiles:
-      - msmtest
-      - testing
 
-  msm:
-    depends_on:
-      mongodb-server:
-        condition: service_healthy
+  stage0_mongodb_api:
+    image: ghcr.io/agile-learning-institute/stage0_mongodb_api:latest
+    restart: no
+    ports:
+      - "8582:8582"
     volumes:
-    - ./configurations:/opt/mongoSchemaManager/configurations
+    - ./tests/test_cases/large_sample:/input
     environment:
-      CONNECTION_STRING: "mongodb://root:example@mongodb-server:27017"
-      DB_NAME: "stage0"
-      LOAD_TEST_DATA: "true"
-    image: ghcr.io/agile-learning-institute/msm:latest
-    profiles:
-      - msmtest
-
-  test:
+      MONGO_CONNECTION_STRING: mongodb://root:example@mongodb-server:27017
+      MONGO_DB_NAME: test_database
+      MONGODB_API_PORT: 8582
+      AUTO_PROCESS: True
+      LOAD_TEST_DATA: True
     depends_on:
       mongodb-server:
         condition: service_healthy
-    environment:
-      CONNECTION_STRING: mongodb://root:example@mongodb-server:27017
-      DB_NAME: "stage0"
-      LOAD_TEST_DATA: "true"
-    image: local/stage0_msm:latest
-    profiles:
-      - testing

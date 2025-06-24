@@ -1,0 +1,150 @@
+[
+  {
+    "_id": {"$oid": "000000000000000000000000"},
+    "status": "pending",
+    "channel_id": "",
+    "name": "pending Empty",
+    "category": "",
+    "guild": "",
+    "purpose": "",
+    "when": {
+      "from": {"$date": "1/2/2025 12:00:00"},
+      "to": {"$date": "1/2/2025 13:00:00"}
+    },
+    "current_exercise": 0,
+    "exercises": [
+      {
+        "exercise_id": {"$oid": "E00000000000000000000001"},
+        "conversation_id": {"$oid": "C00000000000000000000001"},
+        "status": "pending",
+        "duration": {
+          "from": {"$date": "1/2/2025 12:10:00"},
+          "to": {"$date": "1/2/2025 12:15:00"}
+        },
+        "observations": [
+          {},
+          {}
+        ]
+      },
+      {
+        "exercise_id": {"$oid": "E00000000000000000000002"},
+        "conversation_id": {"$oid": "C00000000000000000000002"},
+        "status": "pending",
+        "duration": {
+          "from": {"$date": "1/2/2025 12:10:00"},
+          "to": {"$date": "1/2/2025 12:15:00"}
+        },
+        "observations": [
+          {},
+          {}
+        ]
+      }
+    ],
+    "last_saved": {
+      "fromIp": "",
+      "byUser": "",
+      "atTime": {"$date": "1/1/2025 12:34:56"},
+      "correlationId": ""
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000001"
+    },
+    "status": "pending",
+    "channel_id": "",
+    "name": "WorkshopName1",
+    "category": "",
+    "guild": "",
+    "purpose": "",
+    "when": {
+      "from": {"$date": "1/2/2025 12:00:00"},
+      "to": {"$date": "1/2/2025 13:00:00"}
+    },
+    "current_exercise": 0,
+    "exercises": [
+      {
+        "exercise_id": {"$oid": "E00000000000000000000003"},
+        "conversation_id": {"$oid": "C00000000000000000000003"},
+        "status": "pending",
+        "duration": {
+          "from": {"$date": "1/2/2025 12:10:00"},
+          "to": {"$date": "1/2/2025 12:15:00"}
+        },
+        "observations": [
+          {},
+          {}
+        ]
+      },
+      {
+        "exercise_id": {"$oid": "E00000000000000000000004"},
+        "conversation_id": {"$oid": "C00000000000000000000004"},
+        "status": "pending",
+        "duration": {
+          "from": {"$date": "1/2/2025 12:10:00"},
+          "to": {"$date": "1/2/2025 12:15:00"}
+        },
+        "observations": [
+          {},
+          {}
+        ]
+      }
+    ],
+    "last_saved": {
+      "fromIp": "",
+      "byUser": "",
+      "atTime": {"$date": "1/1/2025 12:34:56"},
+      "correlationId": ""
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000002"
+    },
+    "status": "pending",
+    "channel_id": "",
+    "name": "another pending workshop",
+    "category": "",
+    "guild": "",
+    "purpose": "",
+    "when": {
+      "from": {"$date": "1/2/2025 12:00:00"},
+      "to": {"$date": "1/2/2025 13:00:00"}
+    },
+    "current_exercise": 0,
+    "exercises": [
+      {
+        "exercise_id": {"$oid": "E00000000000000000000005"},
+        "conversation_id": {"$oid": "C00000000000000000000005"},
+        "status": "pending",
+        "duration": {
+          "from": {"$date": "1/2/2025 12:10:00"},
+          "to": {"$date": "1/2/2025 12:15:00"}
+        },
+        "observations": [
+          {},
+          {}
+        ]
+      },
+      {
+        "exercise_id": {"$oid": "E00000000000000000000001"},
+        "conversation_id": {"$oid": "C00000000000000000000006"},
+        "status": "pending",
+        "duration": {
+          "from": {"$date": "1/2/2025 12:10:00"},
+          "to": {"$date": "1/2/2025 12:15:00"}
+        },
+        "observations": [
+          {},
+          {}
+        ]
+      }
+    ],
+    "last_saved": {
+      "fromIp": "",
+      "byUser": "",
+      "atTime": {"$date": "1/1/2025 12:34:56"},
+      "correlationId": ""
+    }
+  }
+]

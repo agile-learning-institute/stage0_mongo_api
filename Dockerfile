@@ -1,12 +1,14 @@
 # From MSM Utility Image
-FROM ghcr.io/agile-learning-institute/msm:latest
+FROM ghcr.io/agile-learning-institute/stage0_mongodb_api:latest
 
 # Default environment configuration values
-# ENV CONNECTION_STRING=mongodb://root:example@localhost:27017
-# ENV CONFIG_FOLDER=/opt/mongoSchemaManager/config
-# ENV MSM_ROOT=/opt/mongoSchemaManager
+# ENV MONGO_CONNECTION_STRING: mongodb://mongodb:27017/?replicaSet=rs0
+# ENV INPUT_FOLDER=/input
+# ENV AUTO_PROCESS=false
+# ENV EXIT_AFTER_PROCESSING=false
 # ENV LOAD_TEST_DATA=true
-# ENV DB_NAME=stage0
+# ENV MONGO_DB_NAME=stage0
+# ENV MONGODB_API_PORT=8081
 
 # Copy files 
-COPY configurations /opt/mongoSchemaManager/configurations
+COPY input /input
