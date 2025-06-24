@@ -24,6 +24,7 @@ one_of:
       type: object
       properties:
         persona: 
+          description: Empathy Persona
           type: object
           properties:
             name:
@@ -32,11 +33,12 @@ one_of:
             description: 
               description: Description of the persona
               type: sentence
-            observations:
-              description: Empathy Observations
-              type: array
-              items:
-                $ref: observation_empathy.1.0.0
+              required: true
+        observations:
+          description: Empathy Observations
+          type: array
+          items:
+            $ref: observation_empathy.1.0.0
     hills: 
       description: Hills of the exercise
       type: object

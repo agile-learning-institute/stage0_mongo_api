@@ -6,7 +6,7 @@
     "description": "Fran the Design Thinking Facilitator",
     "channels": ["TEST_CHANNEL_1", "TEST_CHANNEL_2"],
     "last_saved": {
-      "at_time": {"$date": "1/1/2025 12:34:56"},
+      "at_time": {"$date": "2025-01-01T12:34:56"},
       "by_user": "USER_1",
       "from_ip": "127.0.0.1",
       "correlation_id": "CORR1"
@@ -19,7 +19,7 @@
     "description": "Cat the customer service representative",
     "channels": [],
     "last_saved": {
-      "at_time": {"$date": "1/1/2025 12:34:56"},
+      "at_time": {"$date": "2025-01-01T12:34:56"},
       "by_user": "",
       "from_ip": "",
       "correlation_id": ""
@@ -32,7 +32,7 @@
     "description": "Sam the support engineer",
     "channels": [],
     "last_saved": {
-      "at_time": {"$date": "1/1/2025 12:34:56"},
+      "at_time": {"$date": "2025-01-01T12:34:56"},
       "by_user": "",
       "from_ip": "",
       "correlation_id": ""
@@ -45,7 +45,7 @@
     "description": "Paul the product manager",
     "channels": [],
     "last_saved": {
-      "at_time": {"$date": "1/1/2025 12:34:56"},
+      "at_time": {"$date": "2025-01-01T12:34:56"},
       "by_user": "",
       "from_ip": "",
       "correlation_id": ""

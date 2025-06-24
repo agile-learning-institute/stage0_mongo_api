@@ -115,7 +115,7 @@
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": {"$date": "1/1/2025 12:34:56"},
+      "atTime": {"$date": "2025-01-01T12:34:56"},
       "correlationId": ""
     }
   },
@@ -133,7 +133,7 @@
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": {"$date": "1/1/2025 12:34:56"},
+      "atTime": {"$date": "2025-01-01T12:34:56"},
       "correlationId": ""
     }
   },
@@ -152,7 +152,7 @@
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": {"$date": "1/1/2025 12:34:56"},
+      "atTime": {"$date": "2025-01-01T12:34:56"},
       "correlationId": ""
     }
   },
@@ -172,7 +172,7 @@
       {"role": "assistant", "content": "group:Rocket fuel includes liquid hydrogen"},
       {"role": "user", "content": "group:Reusable rockets reduce launch costs"},
       {"role": "assistant", "content": "group:Heat shields protect rockets on reentry"},
-      {"role": "user", "content": "group:Rockets must overcome Earth’s gravity"},
+      {"role": "user", "content": "group:Rockets must overcome Earth's gravity"},
       {"role": "assistant", "content": "group:Supersonic rockets break sound barriers"},
       {"role": "user", "content": "group:Propellant mass affects rocket efficiency"},
       {"role": "assistant", "content": "group:Launch windows depend on orbit paths"},
@@ -196,7 +196,7 @@
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": {"$date": "1/1/2025 12:34:56"},
+      "atTime": {"$date": "2025-01-01T12:34:56"},
       "correlationId": ""
     }
   },
@@ -216,7 +216,7 @@
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": {"$date": "1/1/2025 12:34:56"},
+      "atTime": {"$date": "2025-01-01T12:34:56"},
       "correlationId": ""
     }
   },
@@ -250,7 +250,7 @@
       {"role": "assistant", "content": "group:Payloads include satellites and probes"},
       {"role": "user", "content": "group:Thrust must exceed gravity to lift off"},
       {"role": "assistant", "content": "group:Launchpads withstand intense forces"},
-      {"role": "user", "content": "group:Rockets operate using Newton’s laws"},
+      {"role": "user", "content": "group:Rockets operate using Newton's laws"},
       {"role": "assistant", "content": "group:Fuel mixtures affect engine efficiency"},
       {"role": "user", "content": "group:Rocket fairings protect cargo in space"},
       {"role": "assistant", "content": "group:Gravity assists save fuel in missions"},
@@ -260,7 +260,7 @@
     "last_saved": {
       "fromIp": "",
       "byUser": "",
-      "atTime": {"$date": "1/1/2025 12:34:56"},
+      "atTime": {"$date": "2025-01-01T12:34:56"},
       "correlationId": ""
     }
   }

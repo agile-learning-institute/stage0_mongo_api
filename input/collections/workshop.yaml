@@ -1,6 +1,6 @@
-title: User Collection
-description: Collection for managing users
-name: user
+title: Workshop Collection
+description: Collection for managing workshops
+name: workshop
 versions:
   - version: "1.0.0.1"
     add_indexes:
@@ -14,4 +14,4 @@ versions:
           last_saved.at_time: 1
         options:
           unique: false
-    test_data: user.1.0.0.1.json
+    test_data: workshop.1.0.0.1.json

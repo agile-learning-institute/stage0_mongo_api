@@ -26,6 +26,13 @@
                 "make": "Make a decision as a Team",
                 "complete": "Exercise Completed"
             },
+            "exercises": {
+                "stakeholders": "Stakeholder mapping exercise",
+                "empathy": "Empathy mapping exercise",
+                "hills": "Hills exercise",
+                "priority": "Priority exercise",
+                "retrospective": "Retrospective exercise"
+            },
             "conversation_status": {
                 "active": "An active conversation",
                 "named": "A named conversation, allows you to load information into a conversation",

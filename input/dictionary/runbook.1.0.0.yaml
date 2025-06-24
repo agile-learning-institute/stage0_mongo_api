@@ -28,10 +28,12 @@ properties:
   input_schema:
     description: Schema of expected input request_parameters file passed in /opt/input_folder
     type: object
+    properties: {}
     additionalProperties: true
   output_schema:
     description: Schema of the return_values file created in /opt/output_folder
     type: object
+    properties: {}
     additionalProperties: true
   last_saved:
     description: Last Saved breadcrumb
