@@ -1,0 +1,20 @@
+title: Priority Exercise Observation
+description: A priority of a Priority exercise
+type: object
+properties:
+  user:
+    description: User who made the priority observation
+    required: true
+    type: word
+  feasibility:
+    description: Hills in order of feasibility (low to high)
+    type: array
+    items:
+      description: Hill Name
+      type: word
+  impact:
+    description: Hills in order of impact (low to high)
+    type: array
+    items:
+      description: Hill Name
+      type: word

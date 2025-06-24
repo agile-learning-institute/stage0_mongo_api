@@ -1,0 +1,23 @@
+title: Hills Exercise Observation
+description: A hill of a Hills exercise
+type: object
+properties:
+  name:
+    description: Unique Name of the hill
+    type: word
+  users:
+    description: Users who made the observation
+    required: true
+    type: array
+    items:
+      description: User Name
+      type: word
+  who:
+    description: Persona Who is the hill about
+    type: sentence
+  what:
+    description: What the user does
+    type: sentence
+  wow:
+    description: The Wow that happens when Who does What
+    type: sentence

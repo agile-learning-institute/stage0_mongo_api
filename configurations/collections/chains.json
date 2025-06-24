@@ -1,9 +1,0 @@
-{
-  "name": "chains",
-  "versions": [
-    {
-      "version": "1.0.0.0",
-      "testData": "chains-1.0.0.0"
-    }
-  ]
-}

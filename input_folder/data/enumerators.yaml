@@ -1,0 +1,34 @@
+title: System Enumerators
+description: Enumerator Values used throughout the system
+type: object
+properties:
+  version: 0
+  status: Active
+  enumerators:
+    default_status:
+      active: Active Workshop
+      archived: Soft Delete Indicator
+    workshop_status:
+      pending: Not yet started
+      active: Active Workshop
+      complete:
+      archived: Soft Delete Indicator
+    template_status:
+      draft: In development, not ready for used
+      active: Available for use
+      deprecated: Available for use with warnings issued
+      archived: No longer available for use
+    exercise_status:
+      pending:
+      observe:
+      reflect:
+      make:
+      complete:
+    user_status:
+      draft:
+      active:
+      deactivated:
+      archived:
+    architectures:
+      microservice1: Initial BEFFE Mongo, Elastic, py/ts api, vue/react ui
+      

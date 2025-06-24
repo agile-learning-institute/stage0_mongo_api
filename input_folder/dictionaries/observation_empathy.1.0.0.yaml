@@ -1,0 +1,23 @@
+title: Empathy Observation
+description: A empathy of a Empathy Mapping exercise
+type: object
+properties:
+  users:
+    description: Users who made the observation
+    required: true
+    type: array
+    items:
+      description: User Name
+      type: word
+  says:
+    description: Things the user says
+    type: sentence
+  does:
+    description: Things the user does
+    type: sentence
+  thinks:
+    description: Things the user thinks
+    type: sentence
+  feels:
+    description: Things the user feels
+    type: sentence
