@@ -1,0 +1,5 @@
+title: Markdown
+description: A String of text, at least 1 and no more than 4k characters. May contain markdown, newlines, and tabs.
+schema:
+  type: string
+  pattern: "[\\s\\S]{1,4096}"

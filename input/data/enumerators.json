@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Enumerations",
+        "status": "Deprecated",
+        "version": 0,
+        "enumerators": {}
+    }, {
+        "name": "Enumerations",
+        "status": "Active",
+        "version": 1,
+        "enumerators": {
+            "default_status": {
+                "active": "Started but not finished",
+                "archived": "Soft Delete Indicator"
+            },
+            "workshop_status": {
+                "pending": "Scheduled, but not started",
+                "active": "Started but not finished",
+                "complete": "Finished",
+                "archived": "Soft Delete Indicator"
+            },
+            "exercise_status": {
+                "pending": "Waiting to start",
+                "observe": "Observe as Individuals",
+                "reflect": "Reflect as a Team",
+                "make": "Make a decision as a Team",
+                "complete": "Exercise Completed"
+            },
+            "exercises": {
+                "stakeholders": "Stakeholder mapping exercise",
+                "empathy": "Empathy mapping exercise",
+                "hills": "Hills exercise",
+                "priority": "Priority exercise",
+                "retrospective": "Retrospective exercise"
+            },
+            "conversation_status": {
+                "active": "An active conversation",
+                "named": "A named conversation, allows you to load information into a conversation",
+                "paused": "An in-active conversation",
+                "full": "A full conversation with a version date",
+                "complete": "A completed conversation with a version date",
+                "archived": "Soft Delete Indicator"
+            },
+            "llm_message_roles": {
+                "system": "System Prompt",
+                "assistant": "LLM Responding to User Prompts",
+                "user": "LLM User sending prompts to the model"
+            },
+            "roles": {
+                "facilitator": "A Design Thinking Facilitator",
+                "engineer": "A Stage0 AI Engineer",
+                "practitioner": "A Design Thinking Practitioner",
+                "administrator": "A Super User"
+            }
+        }
+    }
+]

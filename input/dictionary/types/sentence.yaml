@@ -1,0 +1,5 @@
+title: Sentence
+description: A String of text, at least 1 and no more than 255 characters with no special characters
+schema:
+  type: string
+  pattern: "^[^\\t\\n\\r]{1,255}$"

@@ -1,0 +1,287 @@
+[
+  {          
+    "_id": {"$oid": "C00000000000000000000001"},
+    "channel_id": "Echo",
+    "description": "The base Echo personality implementing message formatting and group conversation",
+    "status": "named",
+    "version": "latest",
+    "conversation": [
+      {
+        "content": "From:System, To:tools You are an Echo bot participating in Discord chats",
+        "role": "system"
+      },
+      {
+        "content": "From:System, To:tools You participate in two conversations at once. The group dialog is a group chat with humans, and the tool dialog is where you use tools to perform actions and lookup answers to questions.",
+        "role": "system"
+      },
+      {
+        "content": "From:System, To:tools It is critical that when you are participating in the conversation, all messages must be formatted as ``From:Fran To:{dialog} {message}`` where dialog is either ``group`` or ``tools`` and message is your reply",
+        "role": "system"
+      },
+      {
+        "content": "From:System, To:tools You are participating in a group conversation, and you should consider if a reply is needed. If no reply is needed you can simply reply with *blank*",
+        "role": "system"
+      },
+      {
+        "content": "From:System, To:tools Try to be concise with your replies, and don't send more than one message at a time. There should not be any extra From: or To: tags unless they are directly related to the conversation",
+        "role": "system"
+      }
+    ],
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
+    }
+  },
+  {          
+    "_id": {"$oid": "C00000000000000000000002"},
+    "channel_id": "Tool",
+    "description": "The Echo Tool personality implementing the tools dialog and agent/action/arguments syntax",
+    "status": "named",
+    "version": "latest",
+    "conversation": [
+      {
+        "content": "From:System, To:tools As an Echo bot, you have access to agents that can take actions for you to look up information or update a database to help users reach a goal.",
+        "role": "system"
+      },
+      {
+        "content": "From:System, To:tools To use a tool you use a command in the form of ``From:Fran To:tools /Agent/Action/Arguments`` where Agent and Action are one-word names, and Arguments is an optional json-parsable string.",
+        "role": "system"
+      },
+      {
+        "content": "From:System, To:tools You can use the echo get_agents action ``/echo/get_agents/`` to get a list of available agents and actions. This action takes no arguments, so you should not provide any",
+        "role": "system"
+      },
+      {
+        "content": "From:System, To:tools You can use the echo get_action action to get information about what arguments are available with the action. For example to get information from the ``workshop`` agent about the ``add_workshop`` action you would use ``/echo/get_action/{\"agent\":\"workshop\", \"action\":\"add_workshop\"}``",
+        "role": "system"
+      },
+      {
+        "content": "From:System, To:tools When you use a command in the tools dialog you will get an answer ``From:agent To:tools Output``. You should interpret this output and summarize it in a message ``From:Fran To:group summary``",
+        "role": "system"
+      }
+    ],
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
+    }
+  },
+  {          
+    "_id": {"$oid": "C00000000000000000000003"},
+    "channel_id": "Fran",
+    "description": "The Echo Fran personality implementing tools for workshop, chain, and exercises",
+    "status": "named",
+    "version": "latest",
+    "conversation": [
+      {
+        "content": "From:System, To:tools Your name is Fran and you are an expert at Design Thinking facilitation. You can help users with agents for handling workshops, chains, and exercises. ",
+        "role": "system"
+      }
+    ],
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
+    }
+  },
+  {          
+    "_id": {"$oid": "C00000000000000000000004"},
+    "channel_id": "Exercise",
+    "description": "The Echo Design Thinking Exercise personality implementing workshop exercise observe/reflect/make functions",
+    "status": "named",
+    "version": "latest",
+    "conversation": [
+      {
+        "content": "From:System, To:tools You specialize in conducting Design Thinking Exercises. Each exercise has three major phases, Observe, Reflect, and Make",
+        "role": "system"
+      },
+      {
+        "content": "From:System, To:tools During the Observe phase of an exercise, you are only parsing messages into observations and the adding those observations to the workshop using the /workshop/add_observation action",
+        "role": "system"
+      },
+      {
+        "content": "From:System, To:tools During the reflect phase of an exercise, you are guiding the conversation to de-duplicate and group observations added previously",
+        "role": "system"
+      },
+      {
+        "content": "From:System, To:tools During the make phase of an exercise, you will develop a consensus from the group about patterns or themes that were found. Each exercise will have specific output goals that accomplish during this phase",
+        "role": "system"
+      }
+    ],
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
+    }
+  },
+  {          
+    "_id": {"$oid": "C00000000000000000000005"},
+    "channel_id": "DISCORD_01",
+    "status": "active",
+    "version": "latest",
+    "conversation": [
+      {"role": "user","content": "group:Hi"},
+      {"role": "assistant","content": "group:Hello, how can I help you"},
+      {"role": "user","content": "group:What kind of things can you help with?"},
+      {"role": "assistant","content": "tools:/echo/get_agents"},
+      {"role": "user","content": "tools:[{\"name\":\"Agent1\"},{\"name\":\"Agent2\"}]"},
+      {"role": "assistant","content": "group:I can help you interact with Agent1, and Agent2"}
+    ],
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
+    }
+  },
+  {
+    "_id": {"$oid": "C00000000000000000000006"},
+    "channel_id": "DISCORD_02",
+    "status": "active",
+    "version": "latest",
+    "conversation": [
+      {"role": "user","content": "group:Hi"},
+      {"role": "assistant","content": "group:Hello"},
+      {"role": "user","content": "group:What can you do"},
+      {"role": "assistant","content": "group:I can help in many ways"}
+    ],
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
+    }
+  },
+  {
+    "_id": {"$oid": "C00000000000000000000007"},
+    "channel_id": "DISCORD_3",
+    "status": "active",
+    "version": "latest",
+    "conversation": [
+        {"role": "user", "content": "group:What is Stage0?"},
+        {"role": "assistant", "content": "group:Stage0 is a framework for AI agents"},
+        {"role": "user", "content": "group:How does Stage0 handle conversations?"},
+        {"role": "assistant", "content": "group:Stage0 manages chat with structured agents"},
+        {"role": "user", "content": "group:Can Stage0 integrate with Discord?"}
+    ],
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
+    }
+  },
+  {
+    "_id": {"$oid": "C00000000000000000000008"},
+    "channel_id": "DISCORD_3",
+    "status": "full",
+    "version": "2025-01-01T12:34:56",
+    "conversation": [
+      {"role": "user", "content": "group:Rocket launches require precise timing"},
+      {"role": "assistant", "content": "group:Satellites rely on rockets for orbit"},
+      {"role": "user", "content": "group:Fuel tanks must withstand high pressure"},
+      {"role": "assistant", "content": "group:SpaceX developed the Starship rocket"},
+      {"role": "user", "content": "group:Rocket exhaust reaches extreme speeds"},
+      {"role": "assistant", "content": "group:Falcon Heavy is a powerful rocket"},
+      {"role": "user", "content": "group:Orbital velocity is about 28,000 km/h"},
+      {"role": "assistant", "content": "group:Rocket fuel includes liquid hydrogen"},
+      {"role": "user", "content": "group:Reusable rockets reduce launch costs"},
+      {"role": "assistant", "content": "group:Heat shields protect rockets on reentry"},
+      {"role": "user", "content": "group:Rockets must overcome Earth's gravity"},
+      {"role": "assistant", "content": "group:Supersonic rockets break sound barriers"},
+      {"role": "user", "content": "group:Propellant mass affects rocket efficiency"},
+      {"role": "assistant", "content": "group:Launch windows depend on orbit paths"},
+      {"role": "user", "content": "group:Nozzles shape rocket exhaust flow"},
+      {"role": "assistant", "content": "group:Rocket gimbals adjust thrust direction"},
+      {"role": "user", "content": "group:Liquid-fueled rockets are more controllable"},
+      {"role": "assistant", "content": "group:Hypergolic fuels ignite on contact"},
+      {"role": "user", "content": "group:Rocket boosters provide initial thrust"},
+      {"role": "assistant", "content": "group:Solid fuel rockets are simpler to build"},
+      {"role": "user", "content": "group:Payload weight affects rocket design"},
+      {"role": "assistant", "content": "group:Delta-v measures velocity change"},
+      {"role": "user", "content": "group:Engines use turbo pumps for fuel flow"},
+      {"role": "assistant", "content": "group:Rocket staging improves efficiency"},
+      {"role": "user", "content": "group:Ion engines provide low thrust for years"},
+      {"role": "assistant", "content": "group:Microgravity affects spacecraft design"},
+      {"role": "user", "content": "group:Plasma rockets may power deep-space travel"},
+      {"role": "assistant", "content": "group:Nuclear propulsion could shorten trips"},
+      {"role": "user", "content": "group:Rocket fairings protect sensitive payloads"},
+      {"role": "assistant", "content": "group:Strap-on boosters increase thrust"}
+    ],
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
+    }
+  },
+  {
+    "_id": {"$oid": "C00000000000000000000009"},
+    "channel_id": "DISCORD_4",
+    "status": "paused",
+    "version": "latest",
+    "conversation": [
+      {"role": "user","content": "group:Hi"},
+      {"role": "assistant","content": "group:Hello"},
+      {"role": "user","content": "group:How are you today"},
+      {"role": "assistant","content": "group:I'm and AI, so I'm always good"},
+      {"role": "user","content": "group:I need to get some work done"},
+      {"role": "assistant","content": "group:What can I do to help?"}
+    ],
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
+    }
+  },
+  {
+    "_id": {"$oid": "C00000000000000000000010"},
+    "status": "full",
+    "channel_id": "DISCORD_3",
+    "version": "2025-02-01T12:34:56",
+    "conversation": [
+      {"role": "user", "content": "group:Rocket engines generate massive thrust"},
+      {"role": "assistant", "content": "group:Saturn V was the most powerful rocket"},
+      {"role": "user", "content": "group:SpaceX developed the reusable Falcon 9"},
+      {"role": "assistant", "content": "group:Solid fuel rockets ignite instantly"},
+      {"role": "user", "content": "group:NASA's SLS will take humans to Mars"},
+      {"role": "assistant", "content": "group:Rocket launches produce extreme heat"},
+      {"role": "user", "content": "group:Fuel efficiency is key for deep space"},
+      {"role": "assistant", "content": "group:Rocket staging improves performance"},
+      {"role": "user", "content": "group:Ion thrusters use electric propulsion"},
+      {"role": "assistant", "content": "group:Rocket nozzles expand hot gases"},
+      {"role": "user", "content": "group:The first rocket was launched in 1232"},
+      {"role": "assistant", "content": "group:Space travel requires precise math"},
+      {"role": "user", "content": "group:Rocket boosters provide extra lift"},
+      {"role": "assistant", "content": "group:Escape velocity is 11.2 km per sec"},
+      {"role": "user", "content": "group:Reusable rockets lower space costs"},
+      {"role": "assistant", "content": "group:Rocket launches are carefully timed"},
+      {"role": "user", "content": "group:Engines burn liquid oxygen and fuel"},
+      {"role": "assistant", "content": "group:Rockets work in the vacuum of space"},
+      {"role": "user", "content": "group:Spacecraft must withstand re-entry heat"},
+      {"role": "assistant", "content": "group:Rocket science involves complex physics"},
+      {"role": "user", "content": "group:Guidance systems control rocket flight"},
+      {"role": "assistant", "content": "group:Payloads include satellites and probes"},
+      {"role": "user", "content": "group:Thrust must exceed gravity to lift off"},
+      {"role": "assistant", "content": "group:Launchpads withstand intense forces"},
+      {"role": "user", "content": "group:Rockets operate using Newton's laws"},
+      {"role": "assistant", "content": "group:Fuel mixtures affect engine efficiency"},
+      {"role": "user", "content": "group:Rocket fairings protect cargo in space"},
+      {"role": "assistant", "content": "group:Gravity assists save fuel in missions"},
+      {"role": "user", "content": "group:Apollo missions used Saturn V rockets"},
+      {"role": "assistant", "content": "group:Future rockets may use nuclear power"}
+    ],
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
+    }
+  }
+]

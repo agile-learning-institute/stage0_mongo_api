@@ -1,0 +1,41 @@
+title: Runbook
+description: A runbook that is run by Sam the SRE
+type: object
+properties:
+  _id:
+    description: Unique identifier of runbook record
+    type: identifier
+    required: true
+  version:
+    description: Runbook Script changes are Versioned. Changes to input_schema are major, output_schema are minor, and bash script are patch.
+    type: count
+    required: true
+  status:
+    description: Status of the runbook
+    type: enum
+    enums: default_status
+    required: true
+  name:
+    description: Short Name (slug) for the runbook
+    type: word
+    required: true
+  description:
+    description: Full description of the runbook
+    type: markdown
+  script:
+    description: Bash Script that the runbook executes
+    type: markdown
+  input_schema:
+    description: Schema of expected input request_parameters file passed in /opt/input_folder
+    type: object
+    properties: {}
+    additionalProperties: true
+  output_schema:
+    description: Schema of the return_values file created in /opt/output_folder
+    type: object
+    properties: {}
+    additionalProperties: true
+  last_saved:
+    description: Last Saved breadcrumb
+    type: breadcrumb
+    required: true

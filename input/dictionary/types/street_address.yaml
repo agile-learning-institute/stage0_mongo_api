@@ -1,0 +1,18 @@
+title: Street Address
+description: A street address
+type: object
+properties:
+  street:
+    description: Street address
+    type: sentence
+    required: true
+  city:
+    description: City
+    type: word
+  state:
+    description: State or province
+    type: state_code
+  postal_code:
+    description: Postal code
+    type: word
+    required: true

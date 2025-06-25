@@ -1,0 +1,29 @@
+title: Runbook
+description: An execution of a Runbook
+type: object
+properties:
+  _id:
+    description: The unique identifier for a Runbook Execution
+    type: identifier
+    required: true
+  status:
+    description: The status of execution. Running, Succeeded, Failed
+    type: enum
+    enums: default_status
+    required: true
+  input_provided:
+    description: The input data provided to the runbook
+    type: object
+    properties: {}
+    additionalProperties: true
+    required: true
+  output_received:
+    description: The output data returned to the runbook
+    type: object
+    properties: {}
+    additionalProperties: true
+    required: true
+  breadcrumb:
+    description: Audit tracking breadcrumb
+    type: breadcrumb
+    required: true

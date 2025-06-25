@@ -1,0 +1,11 @@
+title: Runbook Execution
+description: Record of a runbook execution
+name: execution
+versions:
+  - version: "1.0.0.1"
+    add_indexes:
+      - name: saved_atIndex
+        key:
+          breadcrumb.saved_at: 1
+        options:
+          unique: false

@@ -1,0 +1,12 @@
+title: Appointment
+description: A date/time range
+type: object
+properties:
+  from: 
+    description: Starting Date/Time
+    type: date-time
+    required: true
+  to: 
+    description: Ending Date/Time
+    type: date-time
+    required: true 

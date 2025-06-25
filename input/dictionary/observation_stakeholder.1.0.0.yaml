@@ -1,0 +1,26 @@
+title: Observation Stakeholder
+description: A stakeholder of a Stakeholder exercise
+type: object
+properties:
+  users:
+    description: Users of the stakeholder
+    required: true
+    type: array
+    items:
+      description: User Name
+      type: word
+  text:
+    description: Text of the stakeholder
+    type: sentence
+  name:
+    description: Name of the stakeholder
+    type: sentence
+  title:
+    description: Title of the stakeholder
+    type: sentence
+  roles:
+    description: Roles of the stakeholder
+    type: array
+    items:
+      description: Role Name
+      type: sentence

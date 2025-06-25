@@ -1,0 +1,28 @@
+title: Ranking Outcome
+description: The outcome of a Priority exercise
+type: object
+properties:
+  no_brainers:
+    description: Hills that are high impact, and high feasibility
+    type: array
+    items:
+      description: Hill Name
+      type: word
+  big_bets:
+    description: Hills that are high impact, but low feasibility
+    type: array
+    items:
+      description: Hill Name
+      type: word
+  utilities:
+    description: Hills that are low impact, but high feasibility
+    type: array
+    items:
+      description: Hill Name
+      type: word
+  unwise:
+    description: Hills that are low impact, and low feasibility
+    type: array
+    items:
+      description: Hill Name
+      type: word

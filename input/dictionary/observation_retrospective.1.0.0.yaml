@@ -1,0 +1,23 @@
+title: Retrospective Observation
+description: A observation for a Retrospective exercise
+type: object
+properties:
+  users:
+    description: Users who made the observation
+    required: true
+    type: array
+    items:
+      description: User Name
+      type: word
+  question:
+    description: Question that remains
+    type: sentence
+  worked_well:
+    description: Something that worked well
+    type: sentence
+  could_be_improved:
+    description: Something that could be improved
+    type: sentence
+  ideas_to_try:
+    description: Something to try differently next time
+    type: sentence

@@ -1,0 +1,69 @@
+title: Workshop
+description: A record of a specific design thinking workshop.
+type: object
+properties:
+  _id:
+    description: The unique identifier for a Workshop
+    type: identifier
+    required: true
+  status:
+    description: Workshop Status/State
+    type: enum
+    enums: workshop_status
+    required: true
+  name:
+    description: Workshop Descriptive Name
+    type: sentence
+  channel_id:
+    description: The discord identifier for the channel this workshop is hosted on
+    type: word
+  channel_name:
+    description: Workshop Channel Name
+    type: word
+  category:
+    description: Discord Channel Category where this workshop channel is
+    type: sentence
+  guild:
+    description: Discord Server where this workshop takes place
+    type: sentence
+  purpose:
+    description: Workshop Purpose
+    type: markdown
+  when:
+    description: From-To Date/Time for the Workshop Event
+    type: appointment
+  current_exercise:
+    description: Index of the current exercise for Active workshops
+    type: index
+  exercises:
+    description: List of workshop_exercise documents
+    type: array
+    required: true
+    items:
+      description: A Workshop Exercise and observations
+      type: object
+      required: true
+      properties:
+          exercise_id:
+            description: The Exercise Instructions this is using
+            type: identifier
+            required: true
+          status:
+            description: The exercise status or state (Observe/Reflect/Make)
+            type: enum
+            enums: exercise_status
+            required: true
+          conversation_id:
+            description: The _id of the conversation for this exercise
+            type: identifier
+            required: true
+          observations:
+            description: Observations of the exercise
+            type: array
+            required: true
+            items:
+              $ref: observation.1.0.0
+  last_saved:
+    description: Last Saved breadcrumb
+    type: breadcrumb
+    required: true

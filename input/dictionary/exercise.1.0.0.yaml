@@ -1,0 +1,35 @@
+title: Exercise
+description: A description of the exercise, and instructions on how to guide it.
+type: object
+properties:
+  _id:
+    description: The unique identifier for a Exercise
+    type: identifier
+    required: true
+  status:
+    description: The status of the Exercise Record
+    type: enum
+    enums: default_status
+    required: true
+  name:
+    description: Short name for the exercise
+    type: word
+    required: true
+  description:
+    description: description
+    type: markdown
+  duration:
+    description: planned duration in minutes
+    type: count
+  observe_instructions:
+    description: observation exercise instructions
+    type: markdown
+  reflect_instructions:
+    description: reflect exercise instructions
+    type: markdown
+  make_instructions:
+    description: make exercise instructions
+    type: markdown
+  last_saved:
+    description: Last Saved breadcrumb
+    type: breadcrumb

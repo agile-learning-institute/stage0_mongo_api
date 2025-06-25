@@ -1,0 +1,30 @@
+title: Repository_Template
+description: A GitHub repo with stage0 Template Configurations
+type: object
+properties:
+  _id:
+    description: The unique identifier for the template
+    type: identifier
+    required: true
+  status:
+    description: The status of the template
+    type: enum
+    enums: default_status
+    required: true
+  name:
+    description: The Name of the template
+    type: sentence
+    required: true
+  architecture:
+    description: The architecture this template supports
+    type: sentence
+  description:
+    description: The description of the template
+    type: markdown
+  url:
+    description: Link to GitHub Repo
+    type: url
+  last_saved:
+    description: Last Saved breadcrumb
+    type: breadcrumb
+    required: true

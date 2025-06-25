@@ -1,0 +1,108 @@
+[
+  {
+    "_id": {"$oid": "000000000000000000000000"},
+    "status": "pending",
+    "channel_id": "1234567890",
+    "name": "pending Empty",
+    "category": "rooms",
+    "guild": "server",
+    "purpose": "purpose",
+    "when": {
+      "from": {"$date": "2025-01-02T12:00:00"},
+      "to": {"$date": "2025-01-02T13:00:00"}
+    },
+    "current_exercise": 0,
+    "exercises": [
+      {
+        "exercise_id": {"$oid": "E00000000000000000000001"},
+        "conversation_id": {"$oid": "C00000000000000000000001"},
+        "status": "pending",
+        "observations": []
+      },
+      {
+        "exercise_id": {"$oid": "E00000000000000000000002"},
+        "conversation_id": {"$oid": "C00000000000000000000002"},
+        "status": "pending",
+        "observations": []
+      }
+    ],
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "1234567890"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000001"
+    },
+    "status": "pending",
+    "channel_id": "1234567890",
+    "name": "WorkshopName1",
+    "category": "rooms",
+    "guild": "server",
+    "purpose": "purpose",
+    "when": {
+      "from": {"$date": "2025-01-02T12:00:00"},
+      "to": {"$date": "2025-01-02T13:00:00"}
+    },
+    "current_exercise": 0,
+    "exercises": [
+      {
+        "exercise_id": {"$oid": "E00000000000000000000003"},
+        "conversation_id": {"$oid": "C00000000000000000000003"},
+        "status": "pending",
+        "observations": []
+      },
+      {
+        "exercise_id": {"$oid": "E00000000000000000000004"},
+        "conversation_id": {"$oid": "C00000000000000000000004"},
+        "status": "pending",
+        "observations": []
+      }
+    ],
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "1234567890"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000002"
+    },
+    "status": "pending",
+    "channel_id": "1234567890",
+    "name": "another pending workshop",
+    "category": "rooms",
+    "guild": "server",
+    "purpose": "purpose",
+    "when": {
+      "from": {"$date": "2025-01-02T12:00:00"},
+      "to": {"$date": "2025-01-02T13:00:00"}
+    },
+    "current_exercise": 0,
+    "exercises": [
+      {
+        "exercise_id": {"$oid": "E00000000000000000000005"},
+        "conversation_id": {"$oid": "C00000000000000000000005"},
+        "status": "pending",
+        "observations": []
+      },
+      {
+        "exercise_id": {"$oid": "E00000000000000000000001"},
+        "conversation_id": {"$oid": "C00000000000000000000006"},
+        "status": "pending",
+        "observations": []
+      }
+    ],
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "1234567890"
+    }
+  }
+]

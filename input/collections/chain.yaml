@@ -1,0 +1,12 @@
+title: Workshop Exercise CHain
+description: A chain is a template for the exercises in a workshop.
+name: chain
+versions:
+  - version: "1.0.0.1"
+    add_indexes:
+      - name: saved_atIndex
+        key:
+          last_saved.at_time: 1
+        options:
+          unique: false
+    test_data: chain.1.0.0.1.json

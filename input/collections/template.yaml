@@ -1,0 +1,17 @@
+title: Template Repository
+description: Collection for managing stage0 repository templates
+name: template
+versions:
+  - version: "1.0.0.1"
+    add_indexes:
+      - name: nameIndex
+        key:
+          name: 1
+        options:
+          unique: true
+      - name: saved_atIndex
+        key:
+          last_saved.at_time: 1
+        options:
+          unique: false
+

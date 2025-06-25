@@ -1,0 +1,31 @@
+title: Bots
+description: Stage0 Bots
+type: object
+properties:
+  _id:
+    description: The unique identifier for a Bot Description
+    type: identifier
+    required: true
+  status:
+    description: The status of the Bot
+    type: enum
+    enums: default_status
+    required: true
+  name:
+    description: Bot Short Name
+    type: word
+    required: true
+  description:
+    description: Short description of bot
+    type: sentence
+  channels:
+    description: List of Discord Channel ID values
+    type: array
+    items:
+      description: Discord Channel ID
+      type: word
+    required: true
+  last_saved:
+    description: Last Saved breadcrumb
+    type: breadcrumb
+    required: true

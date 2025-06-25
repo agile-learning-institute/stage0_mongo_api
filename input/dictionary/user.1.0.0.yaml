@@ -1,0 +1,27 @@
+title: User
+description: A User of the System
+type: object
+properties:
+  _id:
+    description: System Generated Unique User ID
+    type: identifier
+    required: true
+  status:
+    description: Status of this user
+    type: enum
+    enums: default_status
+    required: true
+  name:
+    description: A Users Name
+    type: sentence
+    required: true
+  email:
+    description: A Users Name
+    type: email
+  discord_id:
+    description: The users Discord User ID
+    type: word
+  lastSaved:
+    description: Information about the last time this document was saved
+    type: breadcrumb
+    required: true

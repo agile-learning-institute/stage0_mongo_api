@@ -1,0 +1,20 @@
+title: Breadcrumb
+description: A tracking breadcrumb
+type: object
+properties:
+  from_ip:
+    description: Http Request remote IP address
+    type: ip_address
+    required: true
+  by_user:
+    description: ID Of User
+    type: word
+    required: true
+  at_time:
+    description: The date-time when last updated
+    type: date-time
+    required: true
+  correlation_id:
+    description: The logging correlation ID of the update transaction
+    type: word
+    required: true

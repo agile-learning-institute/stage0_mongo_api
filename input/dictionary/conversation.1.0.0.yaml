@@ -1,0 +1,45 @@
+title: A conversation with a LLM
+description: A conversation, that occurs on a Discord Channel and is a set of LLM standard message objects. 
+type: object
+properties:
+  _id:
+    description: The unique identifier for a channel mongo document
+    type: identifier
+    required: true
+  channel_id:
+    description: The Discord channel_id this conversation is taking place in, or the name of a named conversation
+    type: word
+    required: true
+  description:
+    description: The description give to a Named conver descriptionsation
+    type: sentence
+  status:
+    description: The status of the conversation
+    type: enum
+    enums: conversation_status
+    required: true
+  version:
+    description: Either "latest" or the date-time the conversation was archived
+    type: word
+    required: true
+  conversation:
+    description: The list of messages in the conversation 
+    type: array
+    required: true
+    items:
+      description: A message in the conversation
+      type: object
+      properties:
+        role:
+          description: The LLM Role (system, user, assistant)
+          type: enum
+          enums: llm_message_roles
+          required: true
+        content:
+          description: The content of the message. Echo messages are formatted, but the database doesn't care.
+          type: markdown
+          required: true
+  last_saved:
+    description: Last Saved breadcrumb
+    type: breadcrumb
+    required: true

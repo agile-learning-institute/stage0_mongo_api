@@ -1,0 +1,70 @@
+title: Observation
+description: A workshop observation
+type: object
+properties:
+  exercise:
+    description: The exercise name
+    type: enum
+    enums: exercises
+    required: true
+one_of:
+  type_property: exercise
+  schemas:
+    stakeholders: 
+      description: Stakeholders Exercise
+      type: object
+      properties:
+        observations:
+          description: Stakeholder Observations
+          type: array
+          items:
+            $ref: observation_stakeholder.1.0.0
+    empathy: 
+      description: Empathy Mapping exercise
+      type: object
+      properties:
+        persona: 
+          description: Empathy Persona
+          type: object
+          properties:
+            name:
+              description: Name of the persona
+              type: word
+            description: 
+              description: Description of the persona
+              type: sentence
+              required: true
+        observations:
+          description: Empathy Observations
+          type: array
+          items:
+            $ref: observation_empathy.1.0.0
+    hills: 
+      description: Hills of the exercise
+      type: object
+      properties:
+        observations:
+          description: Hills Observations
+          type: array
+          items:
+            $ref: observation_hills.1.0.0
+    priority: 
+      description: Priority of the exercise
+      type: object
+      properties:
+        observations:
+          description: Priority Observations
+          type: array
+          items:
+            $ref: observation_priority.1.0.0
+        outcome:
+          $ref: observation_ranking.1.0.0
+    retrospective: 
+      description: Retrospective of the exercise
+      type: object
+      properties:
+        observations:
+          description: Retrospective Observations
+          type: array
+          items:
+            $ref: observation_retrospective.1.0.0

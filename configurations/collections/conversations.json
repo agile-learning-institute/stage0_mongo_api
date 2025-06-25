@@ -1,9 +1,0 @@
-{
-  "name": "conversations",
-  "versions": [
-    {
-      "version": "1.0.0.0",
-      "testData": "conversations-1.0.0.0"
-    }
-  ]
-}

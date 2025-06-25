@@ -1,0 +1,82 @@
+[
+  {
+    "_id": {"$oid": "E00000000000000000000001"},
+    "status": "active",
+    "name": "Stakeholders",
+    "description": "Stakeholders Exercise",
+    "duration": 30,
+    "observe_instructions": "listen",
+    "reflect_instructions": "reflect",
+    "make_instructions": "make",
+    "last_saved": {
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "by_user": "user1",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "1234567890"
+    }
+  },
+  {
+    "_id": {"$oid": "E00000000000000000000002"},
+    "status": "active",
+    "name": "EmpathyMap",
+    "description": "Empathy Mapping exercise",
+    "duration": 30,
+    "observe_instructions": "listen",
+    "reflect_instructions": "reflect",
+    "make_instructions": "make",
+    "last_saved": {
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "by_user": "user1",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "1234567890"
+    }
+  },
+  {
+    "_id": {"$oid": "E00000000000000000000003"},
+    "status": "active",
+    "name": "Hills",
+    "description": "Hills of the exercise",
+    "duration": 30,
+    "observe_instructions": "listen",
+    "reflect_instructions": "reflect",
+    "make_instructions": "make",
+    "last_saved": {
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "by_user": "user1",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "1234567890"
+    }
+  },
+  {
+    "_id": {"$oid": "E00000000000000000000004"},
+    "status": "active",
+    "name": "PriorityGrid",
+    "description": "Priority Grid exercise",
+    "duration": 30,
+    "observe_instructions": "listen",
+    "reflect_instructions": "reflect",
+    "make_instructions": "make",
+    "last_saved": {
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "by_user": "user1",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "1234567890"
+    }
+  },
+  {
+    "_id": {"$oid": "E00000000000000000000005"},
+    "status": "active",
+    "name": "Feedback",
+    "description": "Feedback exercise",
+    "duration": 30,
+    "observe_instructions": "listen",
+    "reflect_instructions": "reflect",
+    "make_instructions": "make",
+    "last_saved": {
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "by_user": "user1",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "1234567890"
+    }
+  }
+]

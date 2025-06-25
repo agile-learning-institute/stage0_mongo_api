@@ -1,0 +1,16 @@
+title: User Collection
+description: Collection for managing users
+name: user
+versions:
+  - version: "1.0.0.1"
+    add_indexes:
+      - name: nameIndex
+        key:
+          name: 1
+        options:
+          unique: true
+      - name: saved_atIndex
+        key:
+          last_saved.at_time: 1
+        options:
+          unique: false

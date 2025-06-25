@@ -1,0 +1,19 @@
+title: Conversation
+description: A conversation is a sequence of messages between a user and a bot.
+name: conversation
+versions:
+  - version: "1.0.0.1"
+    add_indexes:
+      - name: channel_id_status_versionIndex
+        key:
+          channel_id: 1 
+          status: 1
+          version: 1
+        options:
+          unique: false
+      - name: saved_atIndex
+        key:
+          last_saved.at_time: 1
+        options:
+          unique: false
+    test_data: conversation.1.0.0.1.json
