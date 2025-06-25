@@ -11,11 +11,14 @@ properties:
     type: enum
     enums: workshop_status
     required: true
+  name:
+    description: Workshop Descriptive Name
+    type: sentence
   channel_id:
     description: The discord identifier for the channel this workshop is hosted on
     type: word
   channel_name:
-    description: Workshop Name
+    description: Workshop Channel Name
     type: word
   category:
     description: Discord Channel Category where this workshop channel is

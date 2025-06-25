@@ -2,15 +2,11 @@ title: Appointment
 description: A date/time range
 type: object
 properties:
-  when:
-    description: From and To Date/Time values
-    type: object
-    properties: 
-      from: 
-        description: Starting Date/Time
-        type: date-time
-        required: true
-      to: 
-        description: Ending Date/Time
-        type: date-time
-        required: true 
+  from: 
+    description: Starting Date/Time
+    type: date-time
+    required: true
+  to: 
+    description: Ending Date/Time
+    type: date-time
+    required: true 

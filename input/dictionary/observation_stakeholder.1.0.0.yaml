@@ -14,13 +14,13 @@ properties:
     type: sentence
   name:
     description: Name of the stakeholder
-    type: word
+    type: sentence
   title:
     description: Title of the stakeholder
-    type: word
+    type: sentence
   roles:
     description: Roles of the stakeholder
     type: array
     items:
       description: Role Name
-      type: word
+      type: sentence

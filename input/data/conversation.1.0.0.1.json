@@ -27,7 +27,12 @@
         "role": "system"
       }
     ],
-    "last_saved": {}
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
+    }
   },
   {          
     "_id": {"$oid": "C00000000000000000000002"},
@@ -57,7 +62,12 @@
         "role": "system"
       }
     ],
-    "last_saved": {}
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
+    }
   },
   {          
     "_id": {"$oid": "C00000000000000000000003"},
@@ -71,7 +81,12 @@
         "role": "system"
       }
     ],
-    "last_saved": {}
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
+    }
   },
   {          
     "_id": {"$oid": "C00000000000000000000004"},
@@ -97,10 +112,15 @@
         "role": "system"
       }
     ],
-    "last_saved": {}
+    "last_saved": {
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
+    }
   },
   {          
-    "_id": {"$oid": "C00000000000000000000001"},
+    "_id": {"$oid": "C00000000000000000000005"},
     "channel_id": "DISCORD_01",
     "status": "active",
     "version": "latest",
@@ -113,14 +133,14 @@
       {"role": "assistant","content": "group:I can help you interact with Agent1, and Agent2"}
     ],
     "last_saved": {
-      "fromIp": "",
-      "byUser": "",
-      "atTime": {"$date": "2025-01-01T12:34:56"},
-      "correlationId": ""
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
     }
   },
   {
-    "_id": {"$oid": "C00000000000000000000002"},
+    "_id": {"$oid": "C00000000000000000000006"},
     "channel_id": "DISCORD_02",
     "status": "active",
     "version": "latest",
@@ -131,14 +151,14 @@
       {"role": "assistant","content": "group:I can help in many ways"}
     ],
     "last_saved": {
-      "fromIp": "",
-      "byUser": "",
-      "atTime": {"$date": "2025-01-01T12:34:56"},
-      "correlationId": ""
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
     }
   },
   {
-    "_id": {"$oid": "C00000000000000000000003"},
+    "_id": {"$oid": "C00000000000000000000007"},
     "channel_id": "DISCORD_3",
     "status": "active",
     "version": "latest",
@@ -150,14 +170,14 @@
         {"role": "user", "content": "group:Can Stage0 integrate with Discord?"}
     ],
     "last_saved": {
-      "fromIp": "",
-      "byUser": "",
-      "atTime": {"$date": "2025-01-01T12:34:56"},
-      "correlationId": ""
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
     }
   },
   {
-    "_id": {"$oid": "C00000000000000000000004"},
+    "_id": {"$oid": "C00000000000000000000008"},
     "channel_id": "DISCORD_3",
     "status": "full",
     "version": "2025-01-01T12:34:56",
@@ -194,14 +214,14 @@
       {"role": "assistant", "content": "group:Strap-on boosters increase thrust"}
     ],
     "last_saved": {
-      "fromIp": "",
-      "byUser": "",
-      "atTime": {"$date": "2025-01-01T12:34:56"},
-      "correlationId": ""
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
     }
   },
   {
-    "_id": {"$oid": "C00000000000000000000005"},
+    "_id": {"$oid": "C00000000000000000000009"},
     "channel_id": "DISCORD_4",
     "status": "paused",
     "version": "latest",
@@ -214,14 +234,14 @@
       {"role": "assistant","content": "group:What can I do to help?"}
     ],
     "last_saved": {
-      "fromIp": "",
-      "byUser": "",
-      "atTime": {"$date": "2025-01-01T12:34:56"},
-      "correlationId": ""
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
     }
   },
   {
-    "_id": {"$oid": "C00000000000000000000006"},
+    "_id": {"$oid": "C00000000000000000000010"},
     "status": "full",
     "channel_id": "DISCORD_3",
     "version": "2025-02-01T12:34:56",
@@ -258,10 +278,10 @@
       {"role": "assistant", "content": "group:Future rockets may use nuclear power"}
     ],
     "last_saved": {
-      "fromIp": "",
-      "byUser": "",
-      "atTime": {"$date": "2025-01-01T12:34:56"},
-      "correlationId": ""
+      "from_ip": "127.0.0.1",
+      "by_user": "user1",
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "correlation_id": "CORR1"
     }
   }
 ]

@@ -25,22 +25,22 @@ See stage0 [Simple Schema standards](https://github.com/agile-learning-institute
 ## Curl Examples
 ```bash
 # List Collection Configurations
-curl -X GET http://localhost:8582/api/collections/
+curl -X GET http://localhost:8081/api/collections/
 
 # Get a Collection Config
-curl -X GET http://localhost:8582/api/collections/{collection_name}
+curl -X GET http://localhost:8081/api/collections/{collection_name}
 
 # Process All Collections
-curl -X POST http://localhost:8582/api/collections/
+curl -X POST http://localhost:8081/api/collections/
 
 # Process Specific Collection
-curl -X POST http://localhost:8582/api/collections/{collection_name}
+curl -X POST http://localhost:8081/api/collections/{collection_name}
 
 # Render BSON Schema
-curl -X GET http://localhost:8582/api/render/bson_schema/{version_name}
+curl -X GET http://localhost:8081/api/render/bson_schema/{version_name}
 
 # Render JSON Schema
-curl -X GET http://localhost:8582/api/render/json_schema/{version_name}
+curl -X GET http://localhost:8081/api/render/json_schema/{version_name}
 
 ```
 

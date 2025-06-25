@@ -42,10 +42,10 @@ services:
     image: ghcr.io/agile-learning-institute/stage0_mongo_api:latest
     restart: no
     ports:
-      - "8582:8582"
+      - "8081:8081"
     environment:
       MONGO_CONNECTION_STRING: mongodb://mongodb:27017/?replicaSet=rs0
-      MONGODB_API_PORT: 8582
+      MONGODB_API_PORT: 8081
       AUTO_PROCESS: True
       LOAD_TEST_DATA: True
     depends_on:
