@@ -1,0 +1,383 @@
+openapi: 3.0.3
+info:
+  title: MongoDB Schema Management API
+  description: API for managing MongoDB collections, indexes, and migrations
+  version: 1.0.0
+  contact:
+    email: devs@agile-learning.institute
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+paths:
+  /api/collections:
+    get:
+      summary: List all Configured Collections 
+      operationId: list_collections
+      responses:
+        '200':
+          description: List of collections
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/collections'
+        '500':
+          description: Processing error
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+    post:
+      summary: Process all Configured Collections 
+      operationId: process_collections
+      responses:
+        '200':
+          description: All configured collections processed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/processing_results'
+        '500':
+          description: Processing error
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+  /api/collections/{name}:
+    get:
+      summary: Get a collection configuration
+      operationId: get_collection
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Collection configuration
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/collection'
+        '404':
+          description: Collection not found
+          content:
+            application/json:
+              schema:
+                type: string
+        '500':
+          description: Processing error
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+    post:
+      summary: Process a collection configuration
+      operationId: process_collection
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Collection configured successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/processing_results'
+        '404':
+          description: Collection not found
+          content:
+            application/json:
+              schema:
+                type: string
+        '500':
+          description: Processing error
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+
+  /api/render/json_schema/{schema_name}:
+    get:
+      summary: Get a Json Schema rendered for a schema
+      description: Json Schema for a specific schema version (e.g., "collection.1.0.0.1")
+      operationId: render_json_schema
+      parameters:
+        - name: schema_name
+          in: path
+          required: true
+          schema:
+            type: string
+            description: Complete schema name including version (e.g., "collection.1.0.0.1")
+      responses:
+        '200':
+          description: Schema
+          content:
+            text/json:
+              schema:
+                type: object
+        '404':
+          description: Schema not found
+          content:
+            application/json:
+              schema:
+                type: string
+        '500':
+          description: Processing error
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+
+  /api/render/bson_schema/{schema_name}:
+    get:
+      summary: Get a Bson Schema rendered for a schema
+      description: Bson Schema for a specific schema version (e.g., "collection.1.0.0.1")
+      operationId: render_bson_schema
+      parameters:
+        - name: schema_name
+          in: path
+          required: true
+          schema:
+            type: string
+            description: Complete schema name including version (e.g., "collection.1.0.0.1")
+      responses:
+        '200':
+          description: Schema
+          content:
+            text/json:
+              schema:
+                type: object
+        '404':
+          description: Schema not found
+          content:
+            application/json:
+              schema:
+                type: string
+        '500':
+          description: Processing error
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+
+  /api/render/openapi/{schema_name}:
+    get:
+      summary: Get a OpenAPI rendered for a schema
+      description: OpenAPI Specification for a specific schema version (e.g., "collection.1.0.0.1")
+      operationId: render_openapi
+      parameters:
+        - name: schema_name
+          in: path
+          required: true
+          schema:
+            type: string
+            description: Complete schema name including version (e.g., "collection.1.0.0.1")
+      responses:
+        '200':
+          description: OpenAPI Specification
+          content:
+            text/yaml:
+              schema:
+                type: object
+        '404':
+          description: Schema not found
+          content:
+            application/json:
+              schema:
+                type: string
+        '500':
+          description: Processing error
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+
+  /api/health:
+    get:
+      summary: Health check endpoint
+      description: Returns Prometheus-formatted metrics for monitoring
+      operationId: health_check
+      responses:
+        '200':
+          description: Prometheus metrics
+          content:
+            text/plain:
+              schema:
+                type: string
+        '500':
+          description: Processing error
+  /api/config:
+    get:
+      summary: Get current configuration
+      operationId: get_config
+      responses:
+        '200':
+          description: Current configuration
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/config'
+        '500':
+          description: Processing error
+components:
+  schemas:
+    collections:
+      type: array
+      items:
+        type: object
+        properties:
+          collection_name:
+            type: string
+          version:
+            type: string
+    collection:
+      description: SchemaManager Collection Configuration
+      type: object
+      required:
+        - name
+        - versions
+      properties:
+        name:
+          description: The name of the MongoDB collection
+          type: string
+        versions:
+          description: List of version configurations in chronological order
+          type: array
+          items:
+            type: object
+            description: Configuration for a specific version
+            properties:
+              version:
+                description: Version string in format major.minor.patch.schema
+                type: string
+              test_data:
+                description: Name of the test data file for this version
+                type: string
+              add_indexes:
+                description: List of indexes to add in this version. 
+                type: array
+                items:
+                  description: Index items are defined at https://www.mongodb.com/docs/manual/indexes/
+              drop_indexes:
+                description: List of index names to drop in this version
+                type: array
+                items:
+                  type: string
+              aggregations:
+                description: List of aggregation pipelines to run for this version. 
+                type: array
+                items:
+                  description: Aggregate pipelines are defined at https://www.mongodb.com/docs/manual/aggregation/
+    processing_results:
+      description: Array of processing operation results
+      type: array
+      items:
+        type: object
+        description: Result of a single processing operation
+        required:
+          - operation
+          - status
+        properties:
+          operation:
+            description: Type of operation performed
+            type: string
+            enum:
+              - evaluate_version
+              - remove_schema
+              - drop_index
+              - run_migration
+              - create_index
+              - apply_schema
+              - load_test_data
+              - update_version
+              - collection_processing
+              - version_processing
+              - overall_status
+          status:
+            description: Operation status
+            type: string
+            enum:
+              - success
+              - error
+              - skipped
+          collection:
+            description: Collection name affected by the operation
+            type: string
+          message:
+            description: Human-readable status message
+            type: string
+          details_type:
+            description: Type of details for complex operations
+            type: string
+            enum:
+              - schema
+              - index
+              - migration
+              - test_data
+              - version
+              - error
+              - overall
+          details:
+            description: Operation-specific details (object or array)
+            oneOf:
+              - type: object
+                additionalProperties: true
+              - type: array
+                items:
+                  type: object
+                  additionalProperties: true
+        additionalProperties: true
+    config:
+      type: object
+      properties:
+        config_items:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                description: Configuration item name
+                type: string
+              value:
+                description: Configuration value (or "secret" for sensitive values)
+                type: string
+              from:
+                description: Source of the configuration value
+                type: string
+                enum:
+                  - default
+                  - file
+                  - environment
+        token:
+          type: object
+          properties:
+            user_id:
+              description: Logged in user_id value
+              type: string
+            from_ip:
+              description: User's current IP address
+              type: string
+            roles:
+              description: User's RBAC roles
+              type: array
+              items:
+                type: string
+
