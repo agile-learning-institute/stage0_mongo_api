@@ -37,10 +37,7 @@ paths:
           content:
             application/json:
               schema:
-                description: List of processing logs
-                type: array
-                items:
-                  type: string
+                $ref: '#/components/schemas/processing_results'
         '500':
           description: Processing error
           content:
@@ -95,10 +92,7 @@ paths:
           content:
             application/json:
               schema:
-                description: List of processing logs
-                type: array
-                items:
-                  type: string
+                $ref: '#/components/schemas/processing_results'
         '404':
           description: Collection not found
           content:
@@ -292,6 +286,65 @@ components:
                 type: array
                 items:
                   description: Aggregate pipelines are defined at https://www.mongodb.com/docs/manual/aggregation/
+    processing_results:
+      description: Array of processing operation results
+      type: array
+      items:
+        type: object
+        description: Result of a single processing operation
+        required:
+          - operation
+          - status
+        properties:
+          operation:
+            description: Type of operation performed
+            type: string
+            enum:
+              - evaluate_version
+              - remove_schema
+              - drop_index
+              - run_migration
+              - create_index
+              - apply_schema
+              - load_test_data
+              - update_version
+              - collection_processing
+              - version_processing
+              - overall_status
+          status:
+            description: Operation status
+            type: string
+            enum:
+              - success
+              - error
+              - skipped
+          collection:
+            description: Collection name affected by the operation
+            type: string
+          message:
+            description: Human-readable status message
+            type: string
+          details_type:
+            description: Type of details for complex operations
+            type: string
+            enum:
+              - schema
+              - index
+              - migration
+              - test_data
+              - version
+              - error
+              - overall
+          details:
+            description: Operation-specific details (object or array)
+            oneOf:
+              - type: object
+                additionalProperties: true
+              - type: array
+                items:
+                  type: object
+                  additionalProperties: true
+        additionalProperties: true
     config:
       type: object
       properties:
@@ -313,14 +366,6 @@ components:
                   - default
                   - file
                   - environment
-        versions:
-          type: array
-          description: List of version information
-          items:
-            type: object
-        enumerators:
-          type: object
-          description: Dictionary of enumerations
         token:
           type: object
           properties:
@@ -335,3 +380,4 @@ components:
               type: array
               items:
                 type: string
+
