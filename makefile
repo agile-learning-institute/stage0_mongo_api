@@ -5,15 +5,16 @@
 # Run the application locally
 test:
 	make down
-	docker compose --profile batch_test up --detach
-	docker compose logs -f "stage0_mongodb_api"
+	docker compose --profile test up --detach
+	# docker compose logs -f "mongodb_api"
 
 # Build and run the Docker container
-container:
+prod:
 	make down
 	docker build --tag ghcr.io/agile-learning-institute/stage0_mongo_api:latest .
-	docker compose --profile interactive_test up --detach
+	docker compose --profile prod up --detach
+	# docker compose logs -f "mongo_api"
 
 # Shut down testing containers and clean house
 down:
-	docker compose down mongodb stage0_mongodb_api stage0_mongo_api
+	docker compose down mongodb mongodb_api mongodb_spa mongo_api mongo_spa

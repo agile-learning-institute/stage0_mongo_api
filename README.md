@@ -1,71 +1,56 @@
 # stage0 Mongo API
 
-This is a mongoDB Configuration API, based on the [stage0_mongodb_api](https://github.com/agile-learning-institute/stage0_mongodb_api) utility.
+This is a mongoDB Configuration API, based on the [stage0_mongodb_api](https://github.com/agile-learning-institute/stage0_mongodb_api) utility. It provides a versioned configuration as code utility for the Stage0 product. 
 
 ## Prerequisites
-- [Stage0 Developers Edition](https://github.com/agile-learning-institute/stage0/blob/main/developer_edition/README.md)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (includes Docker Compose)
+- [Make](https://www.gnu.org/software/make/) which is standard on most OS's
+- [MongoDB Compass](https://www.mongodb.com/try/download/compass) to verify expected configurations
+
+## Contributing Guide
+The configurations here are versioned, it's important that you not change any of the existing dictionaries or types. You can update a collection configuration file to define a new version of the collection, and create a new dictionaries as needed. You can add a new version to the enumerators data file, or define new custom types as needed. 
+
+Edit the appropriate files. Then use ``make test`` and visit [http://localhost:8082](http://localhost:8082). You can edit the files in place, and refresh the page to load new configurations. You may need to drop the database in order to re-test processing, but the service does not need to be restarted.
+
+```
+INPUT_FOLDER/
+├── collections/                # Collection Configuration Files      
+│   ├── bot.yaml            
+│   ├── chain.yaml          
+│   ├── ...
+│   └── workshop.yaml
+├── data/                       # Test data and Enumerators
+│   ├── enumerators.json    
+│   ├── bot.1.0.0.1.json    
+│   ├── ...
+│   └── workshop.1.0.0.1.yaml
+└── dictionary/                 # Data Dictionaries (Simple Schema)
+    ├── types/                  # Simple Schema custom types
+    │   ├── word.yaml
+    │   ├── sentence.yaml
+    │   └── ...
+    ├── bot.1.0.0.1.yaml
+    ├── ...
+    └── workshop.1.2.3.4.yaml
+```
 
 ## Developer Commands
+The make-test and make-prod commands both tail the API logs. You will have to press Ctrl-C to stop tailing the logs.
+
 ```bash
-## Test /input configurations in batch mode
+## Test /input configurations interactively
 make test
 
-## Build and run the container in interactive mode to use the API
-make container
+## Build and run the container to test before making a PR
+make prod
 
 ## Shut down services after testing
 make down
 ```
 
-## API
-See stage0_mongodb_api [Open API Specifications](https://github.com/agile-learning-institute/stage0_mongodb_api/blob/main/docs/openapi.yaml) for API endpoint details
-See stage0_mongodb_api [Reference](https://github.com/agile-learning-institute/stage0_mongodb_api/blob/main/REFERENCE.md) for configuration details.
-See stage0 [Simple Schema standards](https://github.com/agile-learning-institute/stage0/blob/main/SIMPLE_SCHEMA.md) to understand the schema language used. 
-
-## Curl Examples
-```bash
-# List Collection Configurations
-curl -X GET http://localhost:8081/api/collections/
-
-# Get a Collection Config
-curl -X GET http://localhost:8081/api/collections/{collection_name}
-
-# Process All Collections
-curl -X POST http://localhost:8081/api/collections/
-
-# Process Specific Collection
-curl -X POST http://localhost:8081/api/collections/{collection_name}
-
-# Render BSON Schema
-curl -X GET http://localhost:8081/api/render/bson_schema/{version_name}
-
-# Render JSON Schema
-curl -X GET http://localhost:8081/api/render/json_schema/{version_name}
-
-```
-
-## Contributing Guide
-Edit the appropriate files. 
-```
-INPUT_FOLDER/
-├── collections/            # Collection Configuration Files
-│   ├── bot.yaml                # Stage0 Bots
-│   ├── chain.yaml              # A Chain of Exercises - a Template for a Workshop
-│   ├── conversation.yaml       # A conversation with an LLM
-│   ├── execution.yaml          # An execution of a Runbook
-│   ├── runbook.yaml            # A runbook that is run by a bot
-│   ├── template.yaml           # A stage0 Template Repository
-│   ├── user.yaml               # A User of the System
-│   └── workshop.yaml           # A record of a specific design thinking workshop
-├── data/                   # Test data - versioned 
-│   ├── enumerators.json    # Enumerators definitions 
-│   └── bot.1.0.0.1.json    # Bot collection test data - versioned
-└── dictionary/             # versioned schemas
-    ├── types/              # custom types (not versioned)
-    │   ├── word.yaml
-    │   ├── sentence.yaml
-    │   └── ...
-    ├── bot.1.0.0.yaml      # Simple Schema for the Bot collection
-    └── ...
-```
-
+## Reference Information
+- [Open API Specifications](./docs/openapi.yaml) for this API
+- [API curl examples](https://github.com/agile-learning-institute/stage0_mongodb_api/blob/main/CONTRIBUTING.md#curl-examples) if you want to do CLI based testing.
+- [Simple Schema standards](https://github.com/agile-learning-institute/stage0/blob/main/SIMPLE_SCHEMA.md) to understand the schema language used. 
+- [MongoDB Utility Reference](https://github.com/agile-learning-institute/stage0_mongodb_api/blob/main/REFERENCE.md) has configuration details.
+- [Stage0 Data Catalog](https://github.com/agile-learning-institute/stage0/blob/main/specifications/data_catalog.yaml) that initialized this repo.

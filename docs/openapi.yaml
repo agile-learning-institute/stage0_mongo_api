@@ -9,7 +9,7 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
 paths:
-  /api/collections:
+  /api/collections/:
     get:
       summary: List all Configured Collections 
       operationId: list_collections
@@ -46,7 +46,7 @@ paths:
                 type: array
                 items:
                   type: object
-  /api/collections/{name}:
+  /api/collections/{name}/:
     get:
       summary: Get a collection configuration
       operationId: get_collection
@@ -108,7 +108,7 @@ paths:
                 items:
                   type: object
 
-  /api/render/json_schema/{schema_name}:
+  /api/render/json_schema/{schema_name}/:
     get:
       summary: Get a Json Schema rendered for a schema
       description: Json Schema for a specific schema version (e.g., "collection.1.0.0.1")
@@ -142,7 +142,7 @@ paths:
                 items:
                   type: object
 
-  /api/render/bson_schema/{schema_name}:
+  /api/render/bson_schema/{schema_name}/:
     get:
       summary: Get a Bson Schema rendered for a schema
       description: Bson Schema for a specific schema version (e.g., "collection.1.0.0.1")
@@ -176,7 +176,7 @@ paths:
                 items:
                   type: object
 
-  /api/render/openapi/{schema_name}:
+  /api/render/openapi/{schema_name}/:
     get:
       summary: Get a OpenAPI rendered for a schema
       description: OpenAPI Specification for a specific schema version (e.g., "collection.1.0.0.1")
@@ -248,6 +248,9 @@ components:
             type: string
           version:
             type: string
+          targeted_version:
+            type: string
+            description: The target version (last version) for this collection
     collection:
       description: SchemaManager Collection Configuration
       type: object
