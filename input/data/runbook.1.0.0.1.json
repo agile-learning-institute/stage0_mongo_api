@@ -1,1 +1,231 @@
-[]
+[
+  {
+    "_id": {"$oid": "222000000000000000000001"},
+    "version": 1,
+    "status": "active",
+    "name": "deploy_webapp",
+    "description": "Deploy a web application to production environment",
+    "script": "#!/bin/bash\n\necho 'Starting webapp deployment...'\n\n# Validate input parameters\nif [ -z \"$APP_NAME\" ]; then\n    echo 'ERROR: APP_NAME is required'\n    exit 1\nfi\n\n# Deploy application\nkubectl apply -f /opt/input_folder/manifests/\n\n# Wait for deployment to complete\nkubectl rollout status deployment/$APP_NAME --timeout=300s\n\n# Verify deployment\nkubectl get pods -l app=$APP_NAME\n\necho 'Deployment completed successfully'\n",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "APP_NAME": {
+          "type": "string",
+          "description": "Name of the application to deploy"
+        },
+        "ENVIRONMENT": {
+          "type": "string",
+          "enum": ["staging", "production"],
+          "description": "Target environment"
+        }
+      },
+      "required": ["APP_NAME"]
+    },
+    "output_schema": {
+      "type": "object",
+      "properties": {
+        "deployment_status": {
+          "type": "string",
+          "enum": ["success", "failed"],
+          "description": "Status of the deployment"
+        },
+        "pod_count": {
+          "type": "integer",
+          "description": "Number of pods deployed"
+        },
+        "deployment_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when deployment completed"
+        }
+      }
+    },
+    "last_saved": {
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "by_user": "AAA000000000000000000001",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "RUNBOOK_CREATE_001"
+    }
+  },
+  {
+    "_id": {"$oid": "222000000000000000000002"},
+    "version": 2,
+    "status": "active",
+    "name": "backup_database",
+    "description": "Create a backup of the production database",
+    "script": "#!/bin/bash\n\necho 'Starting database backup...'\n\n# Set variables\nBACKUP_DIR=\"/opt/backups\"\nTIMESTAMP=$(date +%Y%m%d_%H%M%S)\nBACKUP_FILE=\"${BACKUP_DIR}/db_backup_${TIMESTAMP}.sql\"\n\n# Create backup directory if it doesn't exist\nmkdir -p $BACKUP_DIR\n\n# Perform database backup\nmysqldump -h $DB_HOST -u $DB_USER -p$DB_PASSWORD $DB_NAME > $BACKUP_FILE\n\n# Compress backup file\ngzip $BACKUP_FILE\n\n# Upload to cloud storage\naws s3 cp \"${BACKUP_FILE}.gz\" s3://backup-bucket/\n\necho 'Backup completed successfully'\n",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "DB_HOST": {
+          "type": "string",
+          "description": "Database host address"
+        },
+        "DB_USER": {
+          "type": "string",
+          "description": "Database username"
+        },
+        "DB_PASSWORD": {
+          "type": "string",
+          "description": "Database password"
+        },
+        "DB_NAME": {
+          "type": "string",
+          "description": "Database name to backup"
+        }
+      },
+      "required": ["DB_HOST", "DB_USER", "DB_PASSWORD", "DB_NAME"]
+    },
+    "output_schema": {
+      "type": "object",
+      "properties": {
+        "backup_status": {
+          "type": "string",
+          "enum": ["success", "failed"],
+          "description": "Status of the backup operation"
+        },
+        "backup_file": {
+          "type": "string",
+          "description": "Path to the backup file"
+        },
+        "backup_size_mb": {
+          "type": "number",
+          "description": "Size of the backup file in MB"
+        },
+        "s3_location": {
+          "type": "string",
+          "description": "S3 location of the uploaded backup"
+        }
+      }
+    },
+    "last_saved": {
+      "at_time": {"$date": "2025-01-01T14:22:33"},
+      "by_user": "AAA000000000000000000002",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "RUNBOOK_CREATE_002"
+    }
+  },
+  {
+    "_id": {"$oid": "222000000000000000000003"},
+    "version": 1,
+    "status": "active",
+    "name": "scale_services",
+    "description": "Scale Kubernetes services based on load",
+    "script": "#!/bin/bash\n\necho 'Scaling services...'\n\n# Scale web service\nkubectl scale deployment web-service --replicas=$WEB_REPLICAS\n\n# Scale api service\nkubectl scale deployment api-service --replicas=$API_REPLICAS\n\n# Wait for scaling to complete\nkubectl rollout status deployment/web-service\nkubectl rollout status deployment/api-service\n\necho 'Services scaled successfully'\n",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "WEB_REPLICAS": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10,
+          "description": "Number of web service replicas"
+        },
+        "API_REPLICAS": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10,
+          "description": "Number of API service replicas"
+        }
+      },
+      "required": ["WEB_REPLICAS", "API_REPLICAS"]
+    },
+    "output_schema": {
+      "type": "object",
+      "properties": {
+        "scaling_status": {
+          "type": "string",
+          "enum": ["success", "failed"],
+          "description": "Status of the scaling operation"
+        },
+        "web_replicas": {
+          "type": "integer",
+          "description": "Current number of web service replicas"
+        },
+        "api_replicas": {
+          "type": "integer",
+          "description": "Current number of API service replicas"
+        },
+        "scaling_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when scaling completed"
+        }
+      }
+    },
+    "last_saved": {
+      "at_time": {"$date": "2025-01-01T16:45:12"},
+      "by_user": "AAA000000000000000000003",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "RUNBOOK_CREATE_003"
+    }
+  },
+  {
+    "_id": {"$oid": "222000000000000000000004"},
+    "version": 1,
+    "status": "archived",
+    "name": "legacy_backup",
+    "description": "Legacy backup script (deprecated)",
+    "script": "#!/bin/bash\n\necho 'Legacy backup script - deprecated'\n# This script is no longer used\n",
+    "input_schema": {
+      "type": "object",
+      "properties": {}
+    },
+    "output_schema": {
+      "type": "object",
+      "properties": {}
+    },
+    "last_saved": {
+      "at_time": {"$date": "2024-12-20T10:15:00"},
+      "by_user": "AAA000000000000000000001",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "RUNBOOK_ARCHIVE_001"
+    }
+  },
+  {
+    "_id": {"$oid": "222000000000000000000005"},
+    "version": 1,
+    "status": "active",
+    "name": "monitor_health",
+    "description": "Monitor system health and generate report",
+    "script": "#!/bin/bash\n\necho 'Monitoring system health...'\n\n# Check CPU usage\nCPU_USAGE=$(top -bn1 | grep 'Cpu(s)' | awk '{print $2}' | cut -d'%' -f1)\n\n# Check memory usage\nMEMORY_USAGE=$(free | grep Mem | awk '{printf \"%.2f\", $3/$2 * 100.0}')\n\n# Check disk usage\nDISK_USAGE=$(df / | tail -1 | awk '{print $5}' | cut -d'%' -f1)\n\n# Generate health report\necho \"{\\\n  \\\"cpu_usage\\\": $CPU_USAGE,\\\n  \\\"memory_usage\\\": $MEMORY_USAGE,\\\n  \\\"disk_usage\\\": $DISK_USAGE,\\\n  \\\"timestamp\\\": \\\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\\\"\\\n}\" > /opt/output_folder/health_report.json\n\necho 'Health monitoring completed'\n",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "check_interval": {
+          "type": "integer",
+          "default": 60,
+          "description": "Check interval in seconds"
+        }
+      }
+    },
+    "output_schema": {
+      "type": "object",
+      "properties": {
+        "cpu_usage": {
+          "type": "number",
+          "description": "CPU usage percentage"
+        },
+        "memory_usage": {
+          "type": "number",
+          "description": "Memory usage percentage"
+        },
+        "disk_usage": {
+          "type": "number",
+          "description": "Disk usage percentage"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of the health check"
+        }
+      }
+    },
+    "last_saved": {
+      "at_time": {"$date": "2025-01-02T08:30:15"},
+      "by_user": "AAA000000000000000000004",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "RUNBOOK_CREATE_005"
+    }
+  }
+]

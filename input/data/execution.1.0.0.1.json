@@ -1,1 +1,163 @@
-[]
+[
+  {
+    "_id": {"$oid": "EEE000000000000000000001"},
+    "status": "active",
+    "input_provided": {
+      "APP_NAME": "webapp-frontend",
+      "ENVIRONMENT": "production"
+    },
+    "output_received": {
+      "deployment_status": "success",
+      "pod_count": 3,
+      "deployment_time": "2025-01-01T13:45:22Z"
+    },
+    "breadcrumb": {
+      "at_time": {"$date": "2025-01-01T13:30:00"},
+      "by_user": "AAA000000000000000000001",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "EXEC_001"
+    }
+  },
+  {
+    "_id": {"$oid": "EEE000000000000000000002"},
+    "status": "active",
+    "input_provided": {
+      "DB_HOST": "db-prod.example.com",
+      "DB_USER": "backup_user",
+      "DB_PASSWORD": "secure_password_123",
+      "DB_NAME": "production_db"
+    },
+    "output_received": {
+      "backup_status": "success",
+      "backup_file": "/opt/backups/db_backup_20250101_143022.sql.gz",
+      "backup_size_mb": 245.7,
+      "s3_location": "s3://backup-bucket/db_backup_20250101_143022.sql.gz"
+    },
+    "breadcrumb": {
+      "at_time": {"$date": "2025-01-01T14:30:00"},
+      "by_user": "AAA000000000000000000002",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "EXEC_002"
+    }
+  },
+  {
+    "_id": {"$oid": "EEE000000000000000000003"},
+    "status": "active",
+    "input_provided": {
+      "WEB_REPLICAS": 5,
+      "API_REPLICAS": 3
+    },
+    "output_received": {
+      "scaling_status": "success",
+      "web_replicas": 5,
+      "api_replicas": 3,
+      "scaling_time": "2025-01-01T17:15:45Z"
+    },
+    "breadcrumb": {
+      "at_time": {"$date": "2025-01-01T17:00:00"},
+      "by_user": "AAA000000000000000000003",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "EXEC_003"
+    }
+  },
+  {
+    "_id": {"$oid": "EEE000000000000000000004"},
+    "status": "active",
+    "input_provided": {
+      "check_interval": 120
+    },
+    "output_received": {
+      "cpu_usage": 23.5,
+      "memory_usage": 67.2,
+      "disk_usage": 45.8,
+      "timestamp": "2025-01-02T09:00:00Z"
+    },
+    "breadcrumb": {
+      "at_time": {"$date": "2025-01-02T09:00:00"},
+      "by_user": "AAA000000000000000000004",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "EXEC_004"
+    }
+  },
+  {
+    "_id": {"$oid": "EEE000000000000000000005"},
+    "status": "active",
+    "input_provided": {
+      "APP_NAME": "api-service",
+      "ENVIRONMENT": "staging"
+    },
+    "output_received": {
+      "deployment_status": "failed",
+      "pod_count": 0,
+      "deployment_time": "2025-01-02T10:30:15Z",
+      "error_message": "Image pull failed: manifest not found"
+    },
+    "breadcrumb": {
+      "at_time": {"$date": "2025-01-02T10:15:00"},
+      "by_user": "AAA000000000000000000001",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "EXEC_005"
+    }
+  },
+  {
+    "_id": {"$oid": "EEE000000000000000000006"},
+    "status": "active",
+    "input_provided": {
+      "WEB_REPLICAS": 2,
+      "API_REPLICAS": 2
+    },
+    "output_received": {
+      "scaling_status": "success",
+      "web_replicas": 2,
+      "api_replicas": 2,
+      "scaling_time": "2025-01-02T11:45:30Z"
+    },
+    "breadcrumb": {
+      "at_time": {"$date": "2025-01-02T11:30:00"},
+      "by_user": "AAA000000000000000000003",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "EXEC_006"
+    }
+  },
+  {
+    "_id": {"$oid": "EEE000000000000000000007"},
+    "status": "active",
+    "input_provided": {
+      "DB_HOST": "db-staging.example.com",
+      "DB_USER": "backup_user",
+      "DB_PASSWORD": "staging_password",
+      "DB_NAME": "staging_db"
+    },
+    "output_received": {
+      "backup_status": "success",
+      "backup_file": "/opt/backups/db_backup_20250102_120000.sql.gz",
+      "backup_size_mb": 89.3,
+      "s3_location": "s3://backup-bucket/staging/db_backup_20250102_120000.sql.gz"
+    },
+    "breadcrumb": {
+      "at_time": {"$date": "2025-01-02T12:00:00"},
+      "by_user": "AAA000000000000000000002",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "EXEC_007"
+    }
+  },
+  {
+    "_id": {"$oid": "EEE000000000000000000008"},
+    "status": "active",
+    "input_provided": {
+      "check_interval": 300
+    },
+    "output_received": {
+      "cpu_usage": 18.7,
+      "memory_usage": 72.1,
+      "disk_usage": 48.3,
+      "timestamp": "2025-01-02T14:30:00Z"
+    },
+    "breadcrumb": {
+      "at_time": {"$date": "2025-01-02T14:30:00"},
+      "by_user": "AAA000000000000000000004",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "EXEC_008"
+    }
+  }
+]
