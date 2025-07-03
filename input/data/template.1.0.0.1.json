@@ -1,1 +1,114 @@
-[]
+[
+  {
+    "_id": {"$oid": "333000000000000000000001"},
+    "status": "active",
+    "name": "Microservices Architecture Template",
+    "architecture": "Microservices with Kubernetes and Docker",
+    "description": "A comprehensive template for building microservices-based applications with Kubernetes orchestration, Docker containers, and modern CI/CD practices. Includes service discovery, load balancing, and monitoring setup.",
+    "url": "https://github.com/stage0/microservices-template",
+    "last_saved": {
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "by_user": "AAA000000000000000000001",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "TEMPLATE_CREATE_001"
+    }
+  },
+  {
+    "_id": {"$oid": "333000000000000000000002"},
+    "status": "active",
+    "name": "Monolithic Web Application Template",
+    "architecture": "Traditional monolithic web application with MVC pattern",
+    "description": "A template for building traditional monolithic web applications using the Model-View-Controller pattern. Includes user authentication, database integration, and RESTful API endpoints.",
+    "url": "https://github.com/stage0/monolithic-template",
+    "last_saved": {
+      "at_time": {"$date": "2025-01-01T13:45:22"},
+      "by_user": "AAA000000000000000000002",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "TEMPLATE_CREATE_002"
+    }
+  },
+  {
+    "_id": {"$oid": "333000000000000000000003"},
+    "status": "active",
+    "name": "Serverless Functions Template",
+    "architecture": "Serverless architecture with AWS Lambda and API Gateway",
+    "description": "A template for building serverless applications using AWS Lambda functions, API Gateway, and other AWS services. Includes event-driven architecture and auto-scaling capabilities.",
+    "url": "https://github.com/stage0/serverless-template",
+    "last_saved": {
+      "at_time": {"$date": "2025-01-01T14:22:33"},
+      "by_user": "AAA000000000000000000003",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "TEMPLATE_CREATE_003"
+    }
+  },
+  {
+    "_id": {"$oid": "333000000000000000000004"},
+    "status": "active",
+    "name": "Event-Driven Architecture Template",
+    "architecture": "Event-driven architecture with message queues and event sourcing",
+    "description": "A template for building event-driven applications using message queues, event sourcing, and CQRS patterns. Includes Apache Kafka integration and event store setup.",
+    "url": "https://github.com/stage0/event-driven-template",
+    "last_saved": {
+      "at_time": {"$date": "2025-01-01T15:10:45"},
+      "by_user": "AAA000000000000000000004",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "TEMPLATE_CREATE_004"
+    }
+  },
+  {
+    "_id": {"$oid": "333000000000000000000005"},
+    "status": "active",
+    "name": "Mobile Backend Template",
+    "architecture": "Mobile backend with REST APIs and push notifications",
+    "description": "A template for building mobile application backends with RESTful APIs, push notification services, and mobile-specific features like user management and content delivery.",
+    "url": "https://github.com/stage0/mobile-backend-template",
+    "last_saved": {
+      "at_time": {"$date": "2025-01-01T16:30:12"},
+      "by_user": "AAA000000000000000000005",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "TEMPLATE_CREATE_005"
+    }
+  },
+  {
+    "_id": {"$oid": "333000000000000000000006"},
+    "status": "archived",
+    "name": "Legacy PHP Template",
+    "architecture": "Traditional PHP application with Apache and MySQL",
+    "description": "Legacy template for PHP applications using Apache web server and MySQL database. This template is deprecated and should not be used for new projects.",
+    "url": "https://github.com/stage0/legacy-php-template",
+    "last_saved": {
+      "at_time": {"$date": "2024-12-15T10:30:00"},
+      "by_user": "AAA000000000000000000001",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "TEMPLATE_ARCHIVE_001"
+    }
+  },
+  {
+    "_id": {"$oid": "333000000000000000000007"},
+    "status": "active",
+    "name": "Data Pipeline Template",
+    "architecture": "Data processing pipeline with ETL and analytics",
+    "description": "A template for building data processing pipelines with ETL processes, data warehousing, and analytics capabilities. Includes Apache Spark, Kafka, and visualization tools.",
+    "url": "https://github.com/stage0/data-pipeline-template",
+    "last_saved": {
+      "at_time": {"$date": "2025-01-02T09:15:30"},
+      "by_user": "AAA000000000000000000002",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "TEMPLATE_CREATE_007"
+    }
+  },
+  {
+    "_id": {"$oid": "333000000000000000000008"},
+    "status": "active",
+    "name": "IoT Platform Template",
+    "architecture": "Internet of Things platform with device management",
+    "description": "A template for building IoT platforms with device management, real-time data processing, and dashboard visualization. Includes MQTT protocol support and edge computing capabilities.",
+    "url": "https://github.com/stage0/iot-platform-template",
+    "last_saved": {
+      "at_time": {"$date": "2025-01-02T11:45:22"},
+      "by_user": "AAA000000000000000000003",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "TEMPLATE_CREATE_008"
+    }
+  }
+]

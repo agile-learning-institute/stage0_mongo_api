@@ -1,6 +1,6 @@
 [
   {
-    "_id": {"$oid": "E00000000000000000000001"},
+    "_id": {"$oid": "DDD000000000000000000001"},
     "status": "active",
     "name": "Stakeholders",
     "description": "Stakeholders Exercise",
@@ -16,7 +16,7 @@
     }
   },
   {
-    "_id": {"$oid": "E00000000000000000000002"},
+    "_id": {"$oid": "DDD000000000000000000002"},
     "status": "active",
     "name": "EmpathyMap",
     "description": "Empathy Mapping exercise",
@@ -32,7 +32,7 @@
     }
   },
   {
-    "_id": {"$oid": "E00000000000000000000003"},
+    "_id": {"$oid": "DDD000000000000000000003"},
     "status": "active",
     "name": "Hills",
     "description": "Hills of the exercise",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "_id": {"$oid": "E00000000000000000000004"},
+    "_id": {"$oid": "DDD000000000000000000004"},
     "status": "active",
     "name": "PriorityGrid",
     "description": "Priority Grid exercise",
@@ -64,7 +64,7 @@
     }
   },
   {
-    "_id": {"$oid": "E00000000000000000000005"},
+    "_id": {"$oid": "DDD000000000000000000005"},
     "status": "active",
     "name": "Feedback",
     "description": "Feedback exercise",

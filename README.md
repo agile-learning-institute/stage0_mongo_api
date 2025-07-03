@@ -54,3 +54,22 @@ make down
 - [Simple Schema standards](https://github.com/agile-learning-institute/stage0/blob/main/SIMPLE_SCHEMA.md) to understand the schema language used. 
 - [MongoDB Utility Reference](https://github.com/agile-learning-institute/stage0_mongodb_api/blob/main/REFERENCE.md) has configuration details.
 - [Stage0 Data Catalog](https://github.com/agile-learning-institute/stage0/blob/main/specifications/data_catalog.yaml) that initialized this repo.
+
+## Test Data Patterns
+
+### ObjectID Collection Mapping
+All ObjectID values in test data files follow a consistent pattern where the first 3 characters indicate the collection type. All ObjectIDs must be 24-character hex strings using only characters 0-9 and A-E.
+
+| Collection | Prefix | Example ObjectID |
+|------------|--------|------------------|
+| User | AAA | AAA000000000000000000001 |
+| Bot | BBB | BBB000000000000000000001 |
+| Chain | CCC | CCC000000000000000000001 |
+| Exercise | DDD | DDD000000000000000000001 |
+| Execution | EEE | EEE000000000000000000001 |
+| Workshop | 000 | 000000000000000000000001 |
+| Conversation | 111 | 111000000000000000000001 |
+| Runbook | 222 | 222000000000000000000001 |
+| Template | 333 | 333000000000000000000001 |
+
+Test data is locked in, so feel free to use this to create end-to-end testing

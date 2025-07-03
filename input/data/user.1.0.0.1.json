@@ -1,0 +1,106 @@
+[
+  {
+    "_id": {"$oid": "AAA000000000000000000001"},
+    "status": "active",
+    "name": "Alice Johnson",
+    "email": "alice.johnson@example.com",
+    "discord_id": "alice_j",
+    "lastSaved": {
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "by_user": "SYSTEM",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "USER_CREATE_001"
+    }
+  },
+  {
+    "_id": {"$oid": "AAA000000000000000000002"},
+    "status": "active",
+    "name": "Bob Smith",
+    "email": "bob.smith@example.com",
+    "discord_id": "bob_smith",
+    "lastSaved": {
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "by_user": "SYSTEM",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "USER_CREATE_002"
+    }
+  },
+  {
+    "_id": {"$oid": "AAA000000000000000000003"},
+    "status": "active",
+    "name": "Carol Davis",
+    "email": "carol.davis@example.com",
+    "discord_id": "carol_d",
+    "lastSaved": {
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "by_user": "SYSTEM",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "USER_CREATE_003"
+    }
+  },
+  {
+    "_id": {"$oid": "AAA000000000000000000004"},
+    "status": "active",
+    "name": "David Wilson",
+    "email": "david.wilson@example.com",
+    "discord_id": "david_w",
+    "lastSaved": {
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "by_user": "SYSTEM",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "USER_CREATE_004"
+    }
+  },
+  {
+    "_id": {"$oid": "AAA000000000000000000005"},
+    "status": "active",
+    "name": "Eva Brown",
+    "email": "eva.brown@example.com",
+    "discord_id": "eva_b",
+    "lastSaved": {
+      "at_time": {"$date": "2025-01-01T12:34:56"},
+      "by_user": "SYSTEM",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "USER_CREATE_005"
+    }
+  },
+  {
+    "_id": {"$oid": "AAA000000000000000000006"},
+    "status": "archived",
+    "name": "Frank Miller",
+    "email": "frank.miller@example.com",
+    "discord_id": "frank_m",
+    "lastSaved": {
+      "at_time": {"$date": "2024-12-15T10:30:00"},
+      "by_user": "ADMIN",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "USER_ARCHIVE_001"
+    }
+  },
+  {
+    "_id": {"$oid": "AAA000000000000000000007"},
+    "status": "active",
+    "name": "Grace Taylor",
+    "email": "grace.taylor@example.com",
+    "discord_id": "grace_t",
+    "lastSaved": {
+      "at_time": {"$date": "2025-01-02T09:15:30"},
+      "by_user": "SYSTEM",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "USER_CREATE_007"
+    }
+  },
+  {
+    "_id": {"$oid": "AAA000000000000000000008"},
+    "status": "active",
+    "name": "Henry Anderson",
+    "email": "henry.anderson@example.com",
+    "discord_id": "henry_a",
+    "lastSaved": {
+      "at_time": {"$date": "2025-01-02T14:22:45"},
+      "by_user": "SYSTEM",
+      "from_ip": "127.0.0.1",
+      "correlation_id": "USER_CREATE_008"
+    }
+  }
+] 
